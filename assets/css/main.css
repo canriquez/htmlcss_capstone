@@ -24,7 +24,7 @@
     --purple: #4E50B8;
     --orange: #F0916E;
     --gray: #414464;
-    --baseBackground: rgb(255, 251, 251);
+    --baseBackground: rgb(255, 246, 246);
     --iconBackGround: rgb(243,245,246);
     --lightTextGray: rgb(170,185,190);
     --lightTextGray2: rgb(131, 141, 145);
@@ -69,14 +69,14 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
   overflow: hidden;
- 
+  background-color: white;
 }
 
 .header-wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: var(white);
+  background-color: var(white)!important;
   padding: 25px 25px 0px 25px;
   border-bottom: 1px solid var(--lightTextGray);
   
@@ -126,8 +126,6 @@ h1 {
 
 .page-header {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .nav-wrap {
@@ -268,4 +266,36 @@ h1 {
     margin-left: 20px;
   }
 
+}
+
+@media screen and (min-width: 1024px) {
+
+  .nav-wrap .location span {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 5px
+  }
+
+  .nav-wrap .list i,
+  .nav-wrap .user-picture i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .nav-wrap .notification svg{ 
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-wrap .vertical span{
+    display: inline-block;
+    border-left: 3px solid var(--iconBackGround);
+    height: 45px;
+    margin-left: 25px;
+  }
 }
