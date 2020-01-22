@@ -1,0 +1,108 @@
+/*
+===================================================
+                font-faces
+===================================================
+*/
+
+@font-face {
+    font-family: 'Genericons';
+    font-display: swap;
+    src: local('Genericons'), url(../fonts/Genericons.eot);
+    src: url(../fonts/Genericons.eot?#iefix) format("embedded-opentype"), url(../fonts/Genericons.woff) format("woff"), url(../fonts/Genericons.ttf) format("truetype"), url(../fonts/Genericons.svg#Genericons) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/*
+===================================================
+                Variables
+===================================================
+*/
+
+:root {
+    /* general page */
+    --purple: #4E50B8;
+    --orange: #F0916E;
+    --gray: #414464;
+    --baseBackground: rgb(254,254,254);
+    --lightTextGray: rgb(170,185,190);
+
+  
+    /* Main */
+
+  }
+
+  /*
+===================================================
+                Page elements
+===================================================
+*/
+
+body {
+    font:normal 12px / 14px 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: var(--gray);
+    background-color: var(--baseBackground);
+  }
+
+h1 {
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 600;
+}
+  
+/* =================   Modal User ================*/
+
+.modal-user {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+  max-width: 80vw;
+  max-height: 20vh;
+  min-width: 280px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+  overflow: hidden;
+ 
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(white);
+  padding: 25px 25px 0px 25px;
+  border-bottom: 1px solid var(--lightTextGray);
+  
+}
+
+/* .box-user .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+ */
+
+.header-wrap a {
+  padding-top: 5px;
+}
+
+.header-wrap a svg {
+    margin-top: 5px;
+    fill: var(--orange);  
+    width: 30px;
+    height: 30px;
+}
+.modal-user .more {
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.modal-user .more a {
+  color: var(--lightTextGray);
+  text-decoration: none;
+/*   width: 100%; */
+}
