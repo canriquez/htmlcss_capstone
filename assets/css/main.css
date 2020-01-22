@@ -24,15 +24,17 @@
     --purple: #4E50B8;
     --orange: #F0916E;
     --gray: #414464;
-    --baseBackground: rgb(254,254,254);
+    --baseBackground: rgb(255, 251, 251);
+    --iconBackGround: rgb(243,245,246);
     --lightTextGray: rgb(170,185,190);
+    --lightTextGray2: rgb(131, 141, 145);
 
   
     /* Main */
 
   }
 
-  /*
+/*
 ===================================================
                 Page elements
 ===================================================
@@ -43,6 +45,8 @@ body {
     box-sizing: border-box;
     color: var(--gray);
     background-color: var(--baseBackground);
+    min-width: 280px;
+    overflow: hidden;
   }
 
 h1 {
@@ -56,7 +60,7 @@ h1 {
 .modal-user {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 300px;
   height: auto;
   max-width: 80vw;
@@ -78,12 +82,18 @@ h1 {
   
 }
 
-/* .box-user .header-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.header-wrap h1::after {
+  content: '\f428';
+  color: greenyellow;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: bold 20px/1 'Genericons';
+  vertical-align: middle;
 }
- */
+
+.header-wrap .info-wrap p {
+  color: var(--lightTextGray2);
+}
 
 .header-wrap a {
   padding-top: 5px;
@@ -92,8 +102,8 @@ h1 {
 .header-wrap a svg {
     margin-top: 5px;
     fill: var(--orange);  
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 }
 .modal-user .more {
   height: auto;
@@ -104,5 +114,158 @@ h1 {
 .modal-user .more a {
   color: var(--lightTextGray);
   text-decoration: none;
-/*   width: 100%; */
+}
+
+
+/*
+===================================================
+                Nav-Bar
+===================================================
+*/
+
+
+.page-header {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+
+}
+
+.nav-wrap {
+  padding: 15px 15px 10px 15px;
+}
+
+.nav-wrap .location,
+.nav-wrap .list,
+.nav-wrap .user-picture {
+  display: none;
+}
+
+.nav-wrap a span {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.nav-wrap a span,
+.nav-wrap a::before,
+.nav-wrap a::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 4px;
+  background-color: var(--gray);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-wrap .notification svg{
+  fill: var(--gray);  
+  width: 24px;
+  height: 24px;
+}
+  
+@media screen and (min-width: 768px) {
+
+  .nav-wrap .nav-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-wrap .location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .nav-wrap .location i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--iconBackGround);
+    border: 1px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+    margin-right: 10px;
+  }
+
+  .nav-wrap .location svg {
+    width: 60%;
+    height: 60%;
+    fill: var(--lightTextGray);
+  }
+
+  .nav-wrap .burger {
+    display: none;
+  }
+
+  .nav-wrap .list,
+  .nav-wrap .user-picture  {
+    display: inline-block;
+  }
+
+  .nav-wrap .location span {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 5px
+  }
+
+  .nav-wrap .location span:first-of-type {
+    color: var(--lightTextGray);
+  }
+ 
+  .nav-wrap .location::after {
+    content: '\f502';
+    color: var(--lightTextGray);
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: bold 8px/1 'Genericons';
+    vertical-align: middle;
+    padding-top: 8px;
+    padding-left: 3px;
+  }
+
+  .nav-wrap .list i,
+  .nav-wrap .user-picture i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .nav-wrap .notification svg,
+  nav-wrap .user-picture svg  {
+    fill: var(--lightTextGray);  
+  }
+
+  .nav-wrap .list svg {
+    width: 60%;
+    height: 60%;
+    fill: var(--lightTextGray);
+  }
+
+  .nav-wrap .user-picture svg {
+    width: 90%;
+    height: 90%;
+    fill: var(--lightTextGray);
+  }
+
+  .nav-wrap .vertical span{
+    display: inline-block;
+    border-left: 3px solid var(--iconBackGround);
+    height: 35px;
+    margin-left: 20px;
+  }
+
 }
