@@ -40,21 +40,42 @@
 
 /*
 ===================================================
+                Navegability
+===================================================
+*/
+
+.user-page {
+  display: none;
+} 
+/* User page starts disabled 
+when the "more" <a> tag is clicked
+then class enabled is added to the class using javascript*/
+
+
+.enabled {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}
+
+/*
+===================================================
                 Page elements
 ===================================================
 */
 
-body {
+section .super-page {
     position: relative;
-    font:normal 10px / 10px 'Open Sans', sans-serif;
+    font:normal 14px / 10px 'Open Sans', sans-serif;
     box-sizing: border-box;
     color: var(--gray);
     background-color: var(--baseBackground);
-    min-width: 280px;
-/*     overflow: hidden; */
+    min-width: 320px;
+    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
-
   }
 
 h1 {
@@ -69,13 +90,13 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
-  width: 80vw;
+/*   width: 80vw; */
   height: auto;
-  max-width: 80vw;
+/*   max-width: 80vw; */
   max-height: 20vh;
-  min-width: 280px;
+  min-width: 75vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 1px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+  border-radius: 10px; overflow: hidden;
   overflow: hidden;
   background-color: white;
 }
@@ -145,6 +166,7 @@ h1 {
 .page-header,
 .the-footer {
   width: 100%;
+
 }
 
 .nav-wrap {
@@ -165,14 +187,14 @@ h1 {
   display: none;
 }
 
-.nav-wrap a span {
+.nav-wrap a.burger span {
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
-.nav-wrap a span,
-.nav-wrap a::before,
-.nav-wrap a::after {
+.nav-wrap a span:first-of-type,
+.nav-wrap a.burger::before,
+.nav-wrap a.burger::after {
   content: "";
   display: block;
   width: 20px;
@@ -448,7 +470,7 @@ h1 {
 
 /* ====================== icons ============== */
 
-footer .engage i {
+footer .engage a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,7 +488,7 @@ footer .engage svg {
   fill: white;
 }
 
-footer .magnifier i {
+footer .magnifier a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -483,7 +505,7 @@ footer .magnifier svg {
   fill: var(--lightTextGray);
 }
 
-footer .layers i {
+footer .layers a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,7 +522,7 @@ footer .layers svg {
   fill: var(--lightTextGray);
 }
 
-footer .chat i {
+footer .chat a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -517,7 +539,7 @@ footer .chat svg {
   fill: var(--lightTextGray);
 }
 
-footer .profile i {
+footer .profile a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -556,7 +578,7 @@ footer .f-wrap {
 
 .modal-main {
   position: absolute;
-  left:10vw;
+  left:12.5vw;
   bottom: 13vh;
 }
 
@@ -565,25 +587,187 @@ footer .f-wrap {
   .main-page .main-patient-img {
     height: 50vh;
   }
-
-  .modal-user {
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    width: 70vw;
-    height: auto;
-    max-width: 70vw;
-    max-height: 15vh;
-    min-width: 255px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
-    overflow: hidden;
-    background-color: white;
-  }
   
   .modal-main {
     position: absolute;
-    left:10vw;
     bottom: 16vh;
   }
+}
+
+/*
+===================================================
+                USER PAGE
+===================================================
+*/
+
+/*  Icons */
+
+.main-box .back-arrow {
+  display: flex;
+  position: absolute;
+  top: 8vw;
+  left: 3.5vw;
+  color: white;
+  align-items: center;
+}
+
+.main-box .back-arrow a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8vw;
+  height: 8vw;
+}
+
+.back-arrow div svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  z-index: 2;
+}
+
+/* =============== Page ================  */
+
+
+.user-page {
+  padding: 0;
+  max-width: 1310px;
+  min-width: 320px;
+  max-height: 100vh;
+
+}
+ .user-page .main-patient-img {
+  background: url(https://via.placeholder.com/360x540/yellow) center/cover no-repeat white;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 0;
+  border-radius: 0 0 15px 15px; overflow: hidden;
+  z-index: 0;
+}
+
+.user-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-page .info1-block {
+  padding: 70px 25px 20px 25px;
+}
+
+.user-page .info1-block .info-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info1-block .info-wrap p:nth-child(1) {
+  color: var(--lightTextGray);
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+.info1-block .info-wrap p:nth-child(2) {
+  color: var(--gray);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+
+.info1-block .location {
+  padding-left: 15%;
+}
+
+.info1-block .info-wrap .name,
+.info1-block .info-wrap .location {
+  width: 50%;
+}
+
+.info1-block .info-wrap .interests,
+.info1-block .info-wrap .lang,
+.info1-block .info-wrap .contact {
+  width: 100%;
+}
+
+.info1-block .name p:last-of-type::after {
+  content: '\f428';
+  color: greenyellow;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: bold 24px/1 'Genericons';
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-bottom: 4px;
+}
+
+.info-wrap .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-wrap .contact .icon-ph {
+  background: url(../img/present-icon.png) center/contain no-repeat white;
+  width: 20vw;
+  height: 20vw;
+  margin-bottom: 0;
+  border-radius: 0 0 15px 15px; overflow: hidden;
+  padding: 3px;
+}
+
+.info-wrap .contact .txt-ph {
+  width: 55vw;
+  margin-top: 15px;
+}
+
+
+.info-wrap .contact h2 {
+  font-size: 1.0rem;
+}
+
+.info-wrap .contact .txt-ph p {
+  color: var(--lightTextGray);
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+/* 
+====================== scroll menu =============
+*/
+
+.scroll-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  min-width: 85vw;
+  bottom: 44%;
+  left: 7.5vw;
+  z-index: 2;
+}
+
+.scroll-menu > div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px; overflow: hidden;
+}
+
+.scroll-menu .icon-back,
+.scroll-menu .icon-fwd {
+  width: 15vw;
+  height: 15vw;
+  background-color: white;
+}
+
+.scroll-menu .icon-heart,
+.scroll-menu .icon-kill {
+  width: 20vw;
+  height: 20vw;
+}
+
+.scroll-menu .icon-heart {
+  background-color: var(--purple);
+}
+
+.scroll-menu .icon-kill {
+  background-color: var(--orange);
 }
