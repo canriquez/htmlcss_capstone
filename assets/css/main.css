@@ -41,17 +41,19 @@
 */
 
 body {
-    font:normal 12px / 14px 'Open Sans', sans-serif;
+    font:normal 10px / 10px 'Open Sans', sans-serif;
     box-sizing: border-box;
     color: var(--gray);
     background-color: var(--baseBackground);
     min-width: 280px;
-    overflow: hidden;
+/*     overflow: hidden; */
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
   }
 
 h1 {
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 14px;
     font-weight: 600;
 }
   
@@ -61,7 +63,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
-  width: 300px;
+  width: 80vw;
   height: auto;
   max-width: 80vw;
   max-height: 20vh;
@@ -77,8 +79,8 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   background-color: var(white)!important;
-  padding: 25px 25px 0px 25px;
-  border-bottom: 1px solid var(--lightTextGray);
+  padding: 20px 20px 0px 20px;
+  border-bottom: 1px solid var(--baseBackground);
   
 }
 
@@ -109,6 +111,7 @@ h1 {
   height: auto;
   padding: 10px;
   text-align: center;
+  background-color: var(--baseBackground);
 }
 
 .modal-user .more a {
@@ -123,6 +126,12 @@ h1 {
 ===================================================
 */
 
+/* Single padding  */
+.nav-wrap,
+.main-page {
+  padding: 10px 6vw 10px 6vw;
+}
+/* ....................... */
 
 .page-header {
   width: 100%;
@@ -133,12 +142,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-
+}
+.nav-wrap img {
+  width: 30%;
 }
 
-.nav-wrap {
-  padding: 15px 15px 10px 15px;
-}
+
 
 .nav-wrap .location,
 .nav-wrap .list,
@@ -159,8 +168,6 @@ h1 {
   width: 20px;
   height: 4px;
   background-color: var(--gray);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .nav-wrap .notification svg{
@@ -299,3 +306,79 @@ h1 {
     margin-left: 25px;
   }
 }
+
+/*
+===================================================
+                mobile: film section
+===================================================
+*/
+.main-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.film-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.film-wrap .focus-img,
+.film-wrap .patient-img {
+  width: 13vw;
+}
+
+.film-wrap img {
+  width: 100%;
+  border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+}
+
+.film-wrap .separator {
+  position: relative;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: var(--lightTextGray);
+  border-radius: 50%;
+
+}
+
+.film-wrap .separator::before,
+.film-wrap .separator::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  background-color: inherit;
+  border-radius: inherit;
+}
+
+.film-wrap .separator::before {
+  top: -0.6rem;
+}
+
+.film-wrap .separator::after {
+  top: 0.6rem;
+}
+
+.main-box {
+  position: relative;
+
+}
+
+.main-page .main-patient-img {
+  margin-top: 10px;
+  background: url(https://via.placeholder.com/360x540/) center/cover no-repeat white;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 0;
+  border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+}
+
+.modal-main {
+  position: absolute;
+  left: 4vw;
+  bottom: -7vh;
+}
+
