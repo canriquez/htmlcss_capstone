@@ -54,6 +54,7 @@ body {
 /*     overflow: hidden; */
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+
   }
 
 h1 {
@@ -135,7 +136,9 @@ h1 {
 .nav-wrap,
 .main-page,
 .the-footer {
-  padding: 10px 6vw 10px 6vw;
+  padding: 30px 6vw 10px 6vw;
+  max-width: 1310px;
+  margin: 0 auto;
 }
 /* ....................... */
 
@@ -383,7 +386,58 @@ h1 {
   border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
 }
 
+.main-box .pic-roll {
+  display: flex;
+  flex-direction: column;
+  justify-content: centered;
 
+  position: absolute;
+  top: 8vw;
+  right: 3.5vw;
+}
+
+.main-box .pic-roll div {
+  margin: 1vw;
+  width: 3.4vw;
+  height: 3.4vw;
+  background-color: var(--lightTextGray2);
+  border: 0px solid rgb(254,254,254); border-radius: 3px; overflow: hidden;
+}
+
+.main-box div .selected {
+  background-color: var(--orange);
+}
+
+.main-box .map-arrow {
+  display: flex;
+  position: absolute;
+  top: 8vw;
+  left: 3.5vw;
+  color: white;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.main-box .map-arrow span {
+  margin-left: 2vw;
+}
+
+
+.main-box .map-arrow a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  height: 6vw;
+}
+
+.main-box div svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  z-index: 2;
+}
 
 /*
 ===================================================
