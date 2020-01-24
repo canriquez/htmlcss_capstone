@@ -1400,3 +1400,14 @@ footer .engage a {
   padding-right: 0;
 }
 
+/*
+===================================================
+               pc - media query - big screen
+===================================================
+*/
+
+@media screen and (min-width: 768px) {
+
+
+  
+}
