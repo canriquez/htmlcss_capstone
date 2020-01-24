@@ -1409,5 +1409,46 @@ footer .engage a {
 @media screen and (min-width: 768px) {
 
 
+  #main-super-page .main-page {
+    width: 39%!important;
+    padding:5px
+  }
+
+  #main-super-page .patient-img,
+  #main-super-page .focus-img {
+    width: 55px;
+  }
+
+  #main-super-page .the-footer,
+  #main-super-page .modal-user {
+    display: none;
+  }
+
+  #main-super-page .main-patient-img {
+    height: 70vh;
+  }
+
+  #main-super-page .map-arrow {
+    top: 30px;
+    left: 10px;
+  }
+
+  #main-super-page .map-arrow a {
+    width: 30px;
+    height: 30px;
+  }
+
+  #main-super-page .map-arrow span {
+    font-size: 1.2rem;
+  }
+
+  #main-super-page .pic-roll div {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+  }
+
   
+
+
 }
