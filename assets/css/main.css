@@ -1408,9 +1408,40 @@ footer .engage a {
 
 @media screen and (min-width: 1024px) {
 
+  #main-chat-page,
+  #main-message-page {
+    display: none;
+  }
+  
+  .container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30fr 35fr 35fr;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "col1 col2 col3"
+  }
+
+  .navbar {grid-area: navbar;}
+  .item1 {grid-area: col1;}
+  .item2 {grid-area: col2;}
+  .item3 {grid-area: col3;}
+
+/*   #col-4 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+ */
+  #main-super-page {
+    display: inline-block;
+    width: 100%!important;
+  } 
+
 
   #main-super-page .main-page {
-    width: 39%!important;
+    width: 100%!important;
     padding:5px
   }
 
@@ -1448,7 +1479,271 @@ footer .engage a {
     margin: 5px;
   }
 
+
+
+  /*  Adjustments for Col 3 - Main user page */
   
+  #main-user-page {
+    width: 40%!important;
+    order: 0;
+  }
+
+  #main-user-page .main-box,
+  #main-user-page .info1-block {
+    width: 100%!important;
+    padding:5px
+  }
+
+  #main-user-page .main-box {
+    display: none;
+  }
+
+  #main-user-page .info1-block .name{
+    width: 100%;
+  }
+
+  #main-user-page .info1-block .location{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #main-user-page .info1-block .info-wrap p:nth-child(1) {
+    color: var(--lightTextGray);
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+  #main-user-page .info1-block .info-wrap p:nth-child(2) {
+    color: var(--gray);
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  #main-user-page .info-wrap .contact h2 {
+    font-size: 12px;
+  }
+  
+  #main-user-page .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  #main-user-page .scroll-menu {
+    display: none;
+    min-width: 40%;
+    bottom: calc(var(--vh, 1vh) * 10);
+ /*    left: 30vw; */
+    left: 0;
+    z-index: 2;
+  }
+
+    .scroll-menu .icon-heart,
+    .scroll-menu .icon-kill {
+      width: 15vw;
+      height: 15vw;
+
+    }
+
+    .scroll-menu .icon-back,
+    .scroll-menu .icon-fwd {
+      width: 8vw;
+      height: 8vw;
+    }
+
+    .page-header {
+      padding: 8px 0px 8px 0px;
+    }
+
+    .page-header .nav-bar {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .page-header .nav-bar .nav-wrap {
+      padding: 10px 0 10px 0;
+    }
+}
+
+/*
+===================================================
+               pc - media query - 768 - 1024
+===================================================
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
 
+#main-chat-page,
+#main-message-page {
+  display: none;
+}
+
+  .container {
+    display: grid;
+    margin: 0 auto;
+    padding: 0;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "col1 col2 col3"
+  }
+
+  .navbar {grid-area: navbar;}
+  .item1 {grid-area: col1;}
+  .item2 {grid-area: col2;}
+  .item3 {grid-area: col3;}
+
+/*   #col-4 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+ */
+
+ 
+ #main-menu-bar {
+   min-width: auto;
+   width: 190px;
+   padding: 0;
+ }
+
+  #main-super-page {
+    display: inline-block;
+    width: 280px!important;
+  } 
+
+
+  #main-super-page .main-page {
+    width: 100%!important;
+    padding:5px
+  }
+
+  #main-super-page .patient-img,
+  #main-super-page .focus-img {
+    width: 50px;
+  }
+
+  #main-super-page .the-footer,
+  #main-super-page .modal-user {
+    display: none;
+  }
+
+  #main-super-page .main-patient-img {
+    height: 480px;
+  }
+
+  #main-super-page .map-arrow {
+    top: 30px;
+    left: 10px;
+  }
+
+  #main-super-page .map-arrow a {
+    width: 30px;
+    height: 30px;
+  }
+
+  #main-super-page .map-arrow span {
+    font-size: 1.2rem;
+  }
+
+  #main-super-page .pic-roll div {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+  }
+
+
+
+  /*  Adjustments for Col 3 - Main user page */
+  
+  #main-user-page {
+    width: 300px;
+    min-width: auto;
+    max-height: 10;
+    order: 0;
+  }
+
+  #main-user-page .main-box,
+  #main-user-page .info1-block {
+    width: 70%!important;
+    padding:5px
+  }
+
+  #main-user-page .main-box {
+    display: none;
+  }
+
+  #main-user-page .info1-block .name{
+    width: 100%;
+  }
+
+  #main-user-page .info1-block .location{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #main-user-page .info1-block .info-wrap p:nth-child(1) {
+    color: var(--lightTextGray);
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+  #main-user-page .info1-block .info-wrap p:nth-child(2) {
+    color: var(--gray);
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  #main-user-page .info-wrap .contact h2 {
+    font-size: 12px;
+  }
+  
+  #main-user-page .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  #main-user-page .scroll-menu {
+    display: none;
+    min-width: 40%;
+    bottom: calc(var(--vh, 1vh) * 10);
+ /*    left: 30vw; */
+    left: 0;
+    z-index: 2;
+  }
+
+    .scroll-menu .icon-heart,
+    .scroll-menu .icon-kill {
+      width: 15vw;
+      height: 15vw;
+
+    }
+
+    .scroll-menu .icon-back,
+    .scroll-menu .icon-fwd {
+      width: 8vw;
+      height: 8vw;
+    }
+
+/*  adjusting header  */
+
+    .page-header {
+      padding: 8px 0px 8px 0px;
+      width: 85%;
+
+     
+    }
+
+    .page-header .nav-bar {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .page-header .nav-bar .nav-wrap {
+      padding: 10px 0 10px 0;
+    }
 }
