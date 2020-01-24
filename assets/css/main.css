@@ -969,6 +969,15 @@ footer .f-wrap {
   width: 100%;
 }
 
+.is-online::after {
+  content: '\f428';
+  color: greenyellow;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: bold 15px/1 'Genericons';
+  vertical-align: middle;
+}
+
 .msg-frame .text-box p {
   font: bold 0.5rem/1rem 'Open Sans', sans-serif;
   color: var(--lightTextGray);
