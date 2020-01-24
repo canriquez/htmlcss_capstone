@@ -1328,3 +1328,75 @@ footer .engage a {
 @media screen and (min-width: 320px) and (max-width: 374px) {
 
 }
+
+
+/*
+===================================================
+                Menu bar
+===================================================
+*/
+
+.menu-bar {
+  min-width: 300px;
+  width: 300px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.menu-wrap ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-wrap ul li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.menu-row  svg{
+  height: 8%;
+  width: 8%;
+  fill: var(--lightTextGray);
+}
+
+.menu-row,
+.menu-row a {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+
+.menu-wrap ul p,
+.extra-info-icon {
+  font: normal 0.9rem/1rem 'Open Sans', sans-serif;
+  color: var(--lightTextGray);
+  padding-right: 5px;
+}
+
+
+.menu-wrap p {
+  width: 60%;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.high-orange {
+  width: 50px;
+  height: 20px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  font: normal 0.9rem/1rem 'Open Sans', sans-serif;
+  color: white;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 6px;
+  padding-right: 0;
+}
+
