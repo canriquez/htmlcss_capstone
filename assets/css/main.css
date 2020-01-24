@@ -13,6 +13,10 @@
     font-style: normal;
   }
 
+/*   @font-face {
+    font-family: Material-Design-Iconic-Font;
+    src: url(../fonts/Material-Design-Iconic-Font.woff2) format('woff2'),url(../fonts/Material-Design-Iconic-Font.woff) format('woff'),url(../fonts/Material-Design-Iconic-Font.ttf?v=2.1.0) format('truetype')
+} */
 /*
 ===================================================
                 Variables
@@ -24,7 +28,8 @@
     --purple: #4E50B8;
     --orange: #F0916E;
     --gray: #414464;
-    --baseBackground: rgb(255, 246, 246);
+/*     --baseBackground: rgb(255, 246, 246); */
+    --baseBackground: rgb(247, 242, 234);
     --iconBackGround: rgb(243,245,246);
     --lightTextGray: rgb(170,185,190);
     --lightTextGray2: rgb(131, 141, 145);
@@ -978,6 +983,16 @@ footer .f-wrap {
   vertical-align: middle;
 }
 
+.is-online-lg::after{
+  content: '\f428';
+  color: greenyellow;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: bold 25px/1 'Genericons';
+  vertical-align: middle;
+
+}
+
 .msg-frame .text-box p {
   font: bold 0.5rem/1rem 'Open Sans', sans-serif;
   color: var(--lightTextGray);
@@ -1055,3 +1070,152 @@ footer .engage a {
 }
 
 /* ========================== */
+
+/*
+===================================================
+                Single Chat Page
+===================================================
+*/
+
+.modal-msg {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  height: auto;
+  max-height: 20vh;
+  min-width: 80vw;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px; overflow: hidden;
+  overflow: hidden;
+  background-color: white;
+}
+
+.modal-msg a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.msg-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.msg-frame .icon-person {
+  background: url(https://via.placeholder.com/40x40/) center/cover no-repeat white;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 0;
+  border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
+}
+
+.msg-wrap .text-box {
+  width: 65%;
+  padding: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.msg-frame .text-box h3 {
+  font: bold 0.8rem/1rem 'Open Sans', sans-serif;
+  margin: 0;
+  margin-bottom: 3px;
+  width: 100%;
+}
+
+.is-online::after {
+  content: '\f428';
+  color: greenyellow;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: bold 15px/1 'Genericons';
+  vertical-align: middle;
+}
+
+.msg-frame .text-box p {
+  font: bold 0.5rem/1rem 'Open Sans', sans-serif;
+  color: var(--lightTextGray);
+  margin: 0;
+}
+
+.msg-frame .t-stamp {
+  font: bold 0.6rem/1rem 'Open Sans', sans-serif;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+
+/* Adjust footet icon sizes */
+
+footer .magnifier a,
+footer .layers a,
+footer .chat a,
+footer .profile a {
+  height: 25px;
+  width: 25px;
+}
+
+footer .layers a {
+margin-right: 40px;
+}
+
+footer .chat a {
+  margin-left: 40px;
+  }
+
+.chat-page footer  .engage {
+  position: fixed;
+  bottom: 40px;
+  left: 44%;
+}
+
+footer .engage a {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+.chat-page footer .engage svg {
+  width: 70%;
+  height: 70%;
+}
+
+/* Fixing position for navbar, footer and message frame */
+.chat-page {
+  background-color: var(--baseBackground);
+  position: relative;
+
+}
+
+.chat-page .nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.chat-page footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.msg-frame {
+  margin-top: 18%;
+  margin-bottom: 100px;
+}
+
+/* ========================== */
+
+.chat-page a {
+  color: var(--gray);
+}
+
+.chat-page .fnc-phone a {
+  margin-right: 10px;
+}
