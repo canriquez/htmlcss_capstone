@@ -790,11 +790,12 @@ footer .f-wrap {
 
 /*  Icons */
 
+
 .main-box .back-arrow {
   display: flex;
   position: absolute;
   top: 8vw;
-  left: 3.5vw;
+  left: 6vw;
   color: white;
   align-items: center;
 }
@@ -807,39 +808,80 @@ footer .f-wrap {
   height: 8vw;
 }
 
-.back-arrow div svg {
+.back-arrow svg {
   width: 100%;
   height: 100%;
   fill: white;
   z-index: 2;
 }
 
+/* Buttons */
+
+.butn {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px 15px 15px 15px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.butn-purple {
+  background-color: var(--purple);
+  font-size: 1.4rem;
+  color: white;
+}
+
+.icon-flt{
+  width: 40px;
+  height: 40px;
+}
+
+.icon-flt svg {
+  width: 100%;
+  height: 100%;
+}
+
+.filter-box {
+  padding: 30px;
+  border-radius: 15px 15px 15px 15px; 
+  overflow: hidden;
+  background-color: white;
+  fill: var(--purple);
+}
+
 /* =============== Page ================  */
+
+
+/* disables the info-wrap add1 fot the standard mobile view */
+#main-user-page .add1 {
+  display: none;
+}
 
 
 .user-page {
   padding: 0;
-  max-width: 1310px;
-  min-width: 320px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
   max-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
  .user-page .main-patient-img {
   background: url(https://via.placeholder.com/360x540/yellow) center/cover no-repeat white;
   width: 100%;
-/*   height: 50vh; */
   height: calc(var(--vh, 1vh) * 50);
   margin-bottom: 0;
   border-radius: 0 0 15px 15px; overflow: hidden;
   z-index: 0;
 }
 
-.user-page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .user-page .info1-block {
   padding-left: 25px;
   padding-right: 25px;
@@ -855,18 +897,14 @@ footer .f-wrap {
 .info1-block .info-wrap p:nth-child(1) {
   color: var(--lightTextGray);
   margin-bottom: 5px;
-  /* font-size: 0.8rem; */
   font-size: calc(var(--vh, 1vh) * 1.5);
 }
 .info1-block .info-wrap p:nth-child(2) {
   color: var(--gray);
   margin-bottom: 10px;
-  /* font-size: 1.1rem; */
   font-size: calc(var(--vh, 1vh) * 2);
   font-weight: 400;
 }
-
-
 
 .info1-block .location {
   padding-left: 15%;
@@ -879,7 +917,7 @@ footer .f-wrap {
 
 .info1-block .info-wrap .interests,
 .info1-block .info-wrap .lang,
-.info1-block .info-wrap .contact {
+.info1-block .contact {
   width: 100%;
 }
 
@@ -890,17 +928,17 @@ footer .f-wrap {
   -webkit-font-smoothing: antialiased;
   font: bold 24px/1 'Genericons';
   vertical-align: middle;
-  margin-left: 2px;
+  margin-left: 0px;
   margin-bottom: 4px;
 }
 
-.info-wrap .contact {
+.contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.info-wrap .contact .icon-ph {
+.contact .icon-ph {
   background: url(../img/present-icon.png) center/contain no-repeat white;
   width: 20vw;
   height: 20vw;
@@ -909,17 +947,27 @@ footer .f-wrap {
   padding: 3px;
 }
 
-.info-wrap .contact .txt-ph {
+.contact .icon-kn {
+  background: url(../img/king-icon.png) center/contain no-repeat white;
+  width: 20vw;
+  height: 20vw;
+  margin-bottom: 0;
+  border-radius: 0 0 15px 15px; overflow: hidden;
+  padding: 3px;
+}
+
+.contact .txt-ph {
   width: 55vw;
   margin-top: 15px;
 }
 
 
-.info-wrap .contact h2 {
-  font-size: 1.0rem;
+.contact h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-.info-wrap .contact .txt-ph p {
+.contact .txt-ph p {
   color: var(--lightTextGray);
   margin-bottom: 5px;
   font-size: 0.8rem;
@@ -935,7 +983,6 @@ footer .f-wrap {
   align-items: center;
   position: fixed;
   min-width: 85vw;
-  /* bottom: 44%; */
   bottom: calc(var(--vh, 1vh) * 48);
   left: 7.5vw;
   z-index: 2;
@@ -1005,7 +1052,6 @@ footer .f-wrap {
 }
 
 
-
 .scroll-menu .icon-heart {
   background-color: var(--purple);
 }
@@ -1014,23 +1060,40 @@ footer .f-wrap {
   background-color: var(--orange);
 }
 
+
 @media screen and (min-width: 768px) {
+
+
+  #main-user-page .add1 {
+    display: block;
+    padding: 30px;
+  }
+
+  /* main box disabling for this view  */
+  #main-user-page .main-box {
+    display: none;
+  }
+
+  /* scroll menu disabling for this view  */
+  #main-user-page .scroll-menu {
+    display: none;
+  }
+
+
 
   .info1-block .info-wrap p:nth-child(1) {
     color: var(--lightTextGray);
     margin-bottom: 5px;
     font-size: 1.3rem;
-    /* font-size: calc(var(--vh, 1vh) * 1.5); */
   }
   .info1-block .info-wrap p:nth-child(2) {
     color: var(--gray);
     margin-bottom: 10px;
     font-size: 1.5rem;
-   /*  font-size: calc(var(--vh, 1vh) * 2); */
     font-weight: 400;
   }
   
-  .info-wrap .contact .icon-ph {
+  .contact .icon-ph {
     background: url(../img/present-icon.png) center/contain no-repeat white;
     width: 15vw;
     height: 15vw;
@@ -1039,17 +1102,17 @@ footer .f-wrap {
     padding: 3px;
   }
 
-  .info-wrap .contact h2 {
+  .contact h2 {
     font-size: 1.5rem;
   }
   
-  .info-wrap .contact .txt-ph p {
+  .contact .txt-ph p {
     color: var(--lightTextGray);
     margin-bottom: 5px;
     font-size: 1.2rem;
   }
   .info-wrap .interest,
-  .info-wrap .contact,
+  .contact,
   .info-wrap .lang {
     margin-top: 18px;
   }
@@ -1068,28 +1131,28 @@ footer .f-wrap {
   }
 
   .scroll-menu .icon-heart,
-.scroll-menu .icon-kill {
-  width: 20vw;
-  height: 20vw;
-  max-height: 95px;
-  max-width: 95px;
-}
+  .scroll-menu .icon-kill {
+    width: 20vw;
+    height: 20vw;
+    max-height: 95px;
+    max-width: 95px;
+  }
 
-.scroll-menu .icon-heart::after {
-  content: '\f461';
-  color: white;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  font: bold 45px/1 'Genericons';
-}
+  .scroll-menu .icon-heart::after {
+    content: '\f461';
+    color: white;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: bold 45px/1 'Genericons';
+  }
 
-.scroll-menu .icon-kill::after {
-  font: bold 45px/1 'Genericons';
-}
+  .scroll-menu .icon-kill::after {
+    font: bold 45px/1 'Genericons';
+  }
 
-.scroll-menu .icon-heart::after {
-  font: bold 65px/1 'Genericons';
-}
+  .scroll-menu .icon-heart::after {
+    font: bold 65px/1 'Genericons';
+  }
 
 }
 
@@ -1098,7 +1161,6 @@ footer .f-wrap {
                 messages page
 ===================================================
 */
-
 
 
 
