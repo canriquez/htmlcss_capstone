@@ -28,8 +28,9 @@
     --purple: #4E50B8;
     --orange: #F0916E;
     --gray: #414464;
-/*     --baseBackground: rgb(255, 246, 246); */
-    --baseBackground: rgb(247, 242, 234);
+    --baseBackground: rgb(246, 246, 246);
+  /*   --baseBackground: rgb(247, 242, 234); */
+/*     --baseBackground: #D7E0E8; */
     --iconBackGround: rgb(243,245,246);
     --lightTextGray: rgb(170,185,190);
     --lightTextGray2: rgb(131, 141, 145);
@@ -1634,6 +1635,141 @@ footer .engage a {
   padding-right: 0;
 }
 
+
+/*
+===================================================
+               tablet - media query >768 Screens
+===================================================
+*/
+
+@media screen and (min-width: 768px) {
+
+.container {
+  background-color: var(--baseBackground);
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "navbar navbar navbar navbar navbar navbar"
+  "col2 col2 col2 col3 col3 col3"
+}
+
+.navbar {grid-area: navbar;}
+.item2 {grid-area: col2;}
+.item3 {grid-area: col3;}
+
+}
+
+/* In this view, add1 is disabled as there is not enough heigth */
+
+#main-user-page .add1 {
+  display: none;
+}
+
+#main-user-page .filter-box {
+  margin: 0px 15px 15px 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#main-user-page .filter-box .contact {
+  margin-top: 0px;
+}
+
+
+#main-user-page .info1-block {
+  padding: 18px;
+  background-color: white;
+  margin: 15px;
+}
+
+
+.contact h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#main-user-page .info-wrap .name{
+  width: 100%;
+}
+
+#main-user-page .name p:nth-child(2) {
+font-size: 26px;
+font-weight: 700;
+position: relative;
+}
+
+#main-user-page .name p:nth-child(2)::after {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  font-size: 30px;
+}
+
+#main-user-page .info-wrap .location {
+  width: 100%;
+  padding-left: 0;
+}
+
+.icon_target {
+  position: relative;
+}
+
+.icon_target span {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--purple);
+  border-radius: 10px;
+  background-image: url(../svg/0_aim.svg);
+  fill: white;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.info1-block .contact .txt-ph h2 {
+  margin-left: 20px;
+}
+
+.info1-block .contact .txt-ph p {
+  color: var(--lightTextGray);
+  margin-left: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+.film-wrap div:nth-child(7),
+.film-wrap div:nth-child(8) {
+  display: none;
+}
+
+#main-super-page .the-footer .scroll-menu {
+  min-width: 45vw;
+  bottom: 0px;
+  left: 1.1vw;
+}
+
+#main-super-page .scroll-menu .icon-back,
+#main-super-page .scroll-menu .icon-fwd {
+  width: 10vw;
+  height: 10vw;
+  max-height: 60px;
+  max-width: 60px;
+}
+
+#main-super-page .scroll-menu .icon-heart,
+#main-super-page .scroll-menu .icon-kill  {
+  width: 15vw;
+  height: 15vw;
+  max-height: 80px;
+  max-width: 80px;
+}
 /*
 ===================================================
                pc - media query - big screen
