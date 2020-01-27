@@ -95,7 +95,7 @@ section .super-page {
   }
 
 h1 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 14px;
     font-weight: 600;
 }
@@ -106,15 +106,16 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
-/*   width: 80vw; */
   height: auto;
-/*   max-width: 80vw; */
-  max-height: 20vh;
-  min-width: 75vw;
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px; overflow: hidden;
   overflow: hidden;
   background-color: white;
+}
+
+.header-wrap h1 {
+  margin-bottom: 0;
 }
 
 .header-wrap {
@@ -138,6 +139,8 @@ h1 {
 
 .header-wrap .info-wrap p {
   color: var(--lightTextGray2);
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .header-wrap a {
@@ -173,11 +176,20 @@ h1 {
 .nav-wrap,
 .main-page,
 .the-footer {
+  width: 100%;
   padding: 30px 6vw 10px 6vw;
   max-width: 1310px;
   margin: 0 auto;
 }
 /* ....................... */
+
+.page-header {
+  padding: 0;
+}
+
+.nav-bar {
+  width: 100%;
+}
 
 .page-header,
 .the-footer {
@@ -194,8 +206,6 @@ h1 {
 .nav-wrap img {
   width: 30%;
 }
-
-
 
 .nav-wrap .location,
 .nav-wrap .list,
@@ -224,7 +234,16 @@ h1 {
   height: 24px;
 }
   
+@media screen and (min-width:576px) {
+  main.container {
+    max-width: 100%!important;
+  }
+}
+
+
 @media screen and (min-width: 768px) {
+
+
 
   .nav-wrap .nav-right {
     display: flex;
@@ -363,6 +382,30 @@ h1 {
 .main-page {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-box {
+  margin-top: 10px;
+}
+
+.modal-main .more {
+  font-size: 12px;
+}
+
+.modal-main {
+  position: relative;
+  width: 90%;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: -5vh;
+} 
+
+.the-footer .scroll-menu {
+  display: none;
 }
 
 .film-wrap {
@@ -371,11 +414,52 @@ h1 {
   align-items: center;
 }
 
+/* Images film solution */
 
-.film-wrap .focus-img,
-.film-wrap .patient-img {
-  width: var(--filmPictureSize);
+.photo-frame {
+  flex: 1;
 }
+.in-focus {
+  position: relative;
+}
+
+
+.in-focus::after {
+  content: '\f405';
+  width: 28px;
+  height: 28px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Genericons';
+  font-weight: normal;
+  position: absolute;
+  background-color: var(--orange);
+  border-radius: 100%;
+  top: 25%;
+  right: 10%;
+}
+
+.photo-frame {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.photo-frame:nth-child(1) {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.photo-frame:nth-child(5) {
+  padding-right: 0px;
+}
+
+.film-wrap div:nth-child(6),
+.film-wrap div:nth-child(7),
+.film-wrap div:nth-child(8) {
+  display: none;
+}
+/* ================= */
+
 
 .film-wrap img {
   width: 100%;
@@ -418,7 +502,6 @@ h1 {
 .main-page .main-patient-img {
   margin-top: 10px;
   background: url(https://via.placeholder.com/360x540/) center/cover no-repeat white;
-  width: 100%;
   height: 60vh;
   margin-bottom: 0;
   border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
@@ -470,11 +553,10 @@ h1 {
   height: 6vw;
 }
 
-.main-box div svg {
+.main-box .map-arrow svg {
+  fill: white;
   width: 100%;
   height: 100%;
-  fill: white;
-  z-index: 2;
 }
 
 /*
@@ -577,7 +659,7 @@ footer .profile svg {
 footer  {
   position: absolute;
   width: 92vw;
-  bottom: 0;
+  bottom: 3%;
   left: 0;
   margin-bottom: 20px;
 }
@@ -592,23 +674,113 @@ footer .f-wrap {
 
 /* modal positioning */
 
-.modal-main {
+/* .modal-main {
   position: absolute;
   left:12.5vw;
   bottom: 13vh;
 }
 
-
-@media screen and (min-width: 320px) and (max-width: 374px){
-  .main-page .main-patient-img {
-    height: 50vh;
-  }
+ */
+@media screen and (min-width: 320px) {
   
-  .modal-main {
-    position: absolute;
-    bottom: 16vh;
-  }
+ /* Images film solution */
+
+.photo-frame:nth-child(5) {
+  padding-right: 2px;
 }
+
+.film-wrap div:nth-child(6) {
+  display: inline-block;
+  padding-right: 0px;
+}
+
+.film-wrap div:nth-child(7),
+.film-wrap div:nth-child(8) {
+  display: none;
+}
+
+.modal-main {
+  top: -12vh;
+} 
+/* ================= */
+  
+} 
+
+@media screen and (min-width: 375px) {
+
+  .main-page .main-patient-img {
+    height: 65vh;
+  }
+  .modal-main {
+    top: -10vh;
+  } 
+}
+
+@media screen and (min-width: 500px) {
+
+/* Images film solution */
+
+
+    .in-focus::after {
+      top: 25%;
+      right: 10%;
+    }
+
+    .film-wrap div:nth-child(5),
+    .film-wrap div:nth-child(6) {
+      padding-right: 6px;
+    }
+    .film-wrap div:nth-child(6),
+    .film-wrap div:nth-child(7),
+    .film-wrap div:nth-child(8) {
+      display: inline-block;
+    }
+/* ================= */
+
+}
+
+@media screen and (min-width: 768px) {
+
+  /* Images film solution */
+  
+  
+      .in-focus::after {
+        top: 35%;
+        right: 8%;
+      }
+  
+      .film-wrap div:nth-child(5),
+      .film-wrap div:nth-child(6) {
+        padding-right: 6px;
+      }
+      .film-wrap div:nth-child(6),
+      .film-wrap div:nth-child(7),
+      .film-wrap div:nth-child(8) {
+        display: inline-block;
+      }
+  /* ================= */
+
+  /* disabling footer content and modal for 768 screens */
+
+      .the-footer {
+        position: relative;
+   /*      height: 50vh; */
+      }
+      .the-footer .f-wrap,
+      .modal-user {
+        display: none;
+      }
+
+      .the-footer .scroll-menu {
+        display: flex;
+        position: absolute;
+        bottom: 150px;
+      }
+
+
+
+  
+  }
 
 /*
 ===================================================
@@ -1405,14 +1577,14 @@ footer .engage a {
                pc - media query - big screen
 ===================================================
 */
-
+/* 
 @media screen and (min-width: 1024px) {
 
   #main-chat-page,
   #main-message-page {
     display: none;
   }
-  
+
   .container {
     display: grid;
     grid-gap: 10px;
@@ -1427,13 +1599,7 @@ footer .engage a {
   .item2 {grid-area: col2;}
   .item3 {grid-area: col3;}
 
-/*   #col-4 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
- */
+
   #main-super-page {
     display: inline-block;
     width: 100%!important;
@@ -1479,11 +1645,11 @@ footer .engage a {
     margin: 5px;
   }
 
-
+ */
 
   /*  Adjustments for Col 3 - Main user page */
   
-  #main-user-page {
+  /* #main-user-page {
     width: 40%!important;
     order: 0;
   }
@@ -1533,7 +1699,6 @@ footer .engage a {
     display: none;
     min-width: 40%;
     bottom: calc(var(--vh, 1vh) * 10);
- /*    left: 30vw; */
     left: 0;
     z-index: 2;
   }
@@ -1563,14 +1728,14 @@ footer .engage a {
     .page-header .nav-bar .nav-wrap {
       padding: 10px 0 10px 0;
     }
-}
+} */
 
 /*
 ===================================================
                pc - media query - 768 - 1024
 ===================================================
 */
-
+/* 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
 
@@ -1595,13 +1760,6 @@ footer .engage a {
   .item2 {grid-area: col2;}
   .item3 {grid-area: col3;}
 
-/*   #col-4 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
- */
 
  
  #main-menu-bar {
@@ -1655,11 +1813,11 @@ footer .engage a {
     margin: 5px;
   }
 
-
+ */
 
   /*  Adjustments for Col 3 - Main user page */
   
-  #main-user-page {
+ /*  #main-user-page {
     width: 300px;
     min-width: auto;
     max-height: 10;
@@ -1711,7 +1869,6 @@ footer .engage a {
     display: none;
     min-width: 40%;
     bottom: calc(var(--vh, 1vh) * 10);
- /*    left: 30vw; */
     left: 0;
     z-index: 2;
   }
@@ -1729,11 +1886,13 @@ footer .engage a {
       height: 8vw;
     }
 
+     */
+
 /*  adjusting header  */
 
-    .page-header {
+   /*  .page-header {
       padding: 8px 0px 8px 0px;
-      width: 85%;
+      width: 100%;
 
      
     }
@@ -1746,4 +1905,4 @@ footer .engage a {
     .page-header .nav-bar .nav-wrap {
       padding: 10px 0 10px 0;
     }
-}
+} */
