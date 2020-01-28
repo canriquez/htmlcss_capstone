@@ -1598,7 +1598,6 @@ footer .engage a {
 
 .menu-bar {
   min-width: 300px;
-  width: 300px;
   margin: 0 auto;
   padding-left: 25px;
   padding-right: 25px;
@@ -1623,13 +1622,18 @@ footer .engage a {
   fill: var(--lightTextGray);
 }
 
-.menu-row,
+.menu-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .menu-row a {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
-
 
 
 .menu-wrap ul p,
@@ -1653,11 +1657,20 @@ footer .engage a {
   border-radius: 5px;
   font: normal 0.9rem/1rem 'Open Sans', sans-serif;
   color: white;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  padding-left: 6px;
   padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.add2 {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 15px;
 }
 
 .add2 .contact {
@@ -1665,11 +1678,13 @@ footer .engage a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .add2 .txt-ph {
-  margin: 0px;
-  padding: 10px;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0px;
 }
 
 .add2 .txt-ph h2 {
@@ -1690,27 +1705,22 @@ footer .engage a {
   text-decoration-color: var(--lightTextGray2);
 } 
 
-.contact .icon-photo {
-  background: url(https://via.placeholder.com/40x40/) center/cover no-repeat white;
-  background-size: 100%;
+.contact .icon-photo img {
+  display: block;
+  height: 60px;
   width: 60px;
-  height:60px;
-  margin: 0px;
-  padding: 1px;
-  border-radius: 15px 15px 15px 15px; 
-  overflow: hidden;
-  padding: 3px;
+  border-radius: 10px;
 }
 
 .icon-cog span {
   padding: 20px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   border-radius: 10px;
   background-image: url(../svg/0_cog.svg);
   fill: white;
-  background-size: 20px;
+  background-size: 25px;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -1728,7 +1738,7 @@ footer .engage a {
 }
 
 .icon-heart {
-  padding: 20px;
+  padding: 15px;
   width: 35px;
   height: 35px;
   background-color: white;
@@ -1740,8 +1750,16 @@ footer .engage a {
   background-position-x: 50%;
   background-position-y: 50%;
 }
+
+.add2wrap .butn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .icon-premium {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 20px;
   width: 25px;
   height: 25px;
   border-radius: 10px;
@@ -1765,6 +1783,7 @@ footer .engage a {
 
 .add2wrap a {
   margin-left: 20px;
+  flex: 2;
 }
 
 
