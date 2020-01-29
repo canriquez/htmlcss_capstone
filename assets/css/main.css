@@ -1046,7 +1046,7 @@ footer .profile svg {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  min-width: 85vw;
+  width: 85%;
   bottom: calc(var(--vh, 1vh) * 48);
   left: 7.5vw;
   z-index: 2;
@@ -1949,7 +1949,7 @@ footer .chat a {
   }
 
   #main-header .nav-wrap {
-    padding: 20px 20px 40px 20px;
+    padding: 40px 20px 40px 20px;
     width: auto;
     margin-left: -15px;
     margin-right: -15px;
@@ -2153,7 +2153,7 @@ footer .chat a {
   }
 
   #main-super-page .the-footer .scroll-menu {
-    min-width: 45vw;
+    width: 88%;
     bottom: 6vh;
     left: 3vw;
   }
@@ -2229,7 +2229,7 @@ footer .chat a {
   .container {
     max-width: 1300px;
     width: 100vw;
-    height: 90vh!important;
+    height: 95vh!important;
 
     overflow: hidden;
     background-color: var(--baseBackground);
@@ -2450,7 +2450,7 @@ footer .chat a {
   }
 
   #main-super-page .the-footer .scroll-menu {
-    min-width: 33vw;
+    width: 88%;
     bottom: 2vh;
     left: 2.2vw;
   }
@@ -2518,11 +2518,27 @@ footer .chat a {
 ===================================================
 */
 
-#main-header .nav-wrap {
-  padding: 20px 20px 40px 20px;
-  width: auto;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding-left: 40px;
-  padding-right: 40px;
+@media screen and (min-width: 1300px) {
+
+
+  #main-header .nav-wrap {
+    padding: 40px 20px 40px 20px;
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .add2 .contact {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .filter-box .contact {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+
 }
