@@ -844,6 +844,11 @@ footer .profile svg {
 ===================================================
 */
 
+#main-header {
+  display: none;
+}
+
+
 .user-page {
   padding: 0;
   margin-left: -15px;
@@ -1908,6 +1913,8 @@ footer .chat a {
 
   .container {
     max-width: 1300px;
+    height: 100vh!important;
+    overflow: hidden;
     background-color: var(--baseBackground);
     display: grid;
     grid-gap: 15px;
@@ -1921,15 +1928,39 @@ footer .chat a {
   .item2 {grid-area: col2;}
   .item3 {grid-area: col3;}
 
-
-  /* In this view, add1 is disabled as there is not enough heigth */
-
   .menu-bar {
     display: none;
   }
 
   #main-header {
-    padding-bottom: 30px;
+    display: block;
+  }
+
+  #main-header-sm {
+    display: none;
+  }
+
+  #main-header .navbar {
+    padding: 0;
+  }
+
+  #main-header .nav-bar {
+    margin: 0;
+  }
+
+  #main-header .nav-wrap {
+    padding: 20px 20px 40px 20px;
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .container #main-header {
+    padding: 0px;
+  }
+
+  .container #main-user-page  {
+    height: 100%!important;
   }
 
   #main-user-page .add1 {
@@ -1961,7 +1992,7 @@ footer .chat a {
     font-size: 0.8rem;
   }
 
-  .filter-box {
+  #main-user-page  .filter-box {
     display: inline-block;
     margin-top: 10px!important;
   }
@@ -2011,14 +2042,39 @@ footer .chat a {
   }
 
 
+  /* Manin Super page adjustments */
+
+  #main-super-page footer {
+    background-color: var(--baseBackground);
+
+  }
+
+  #main-super-page footer .f-wrap{
+    display: none;
+  }
+
+  #main-super-page {
+    height: 100%;
+    background: linear-gradient(to bottom, var(--baseBackground) 0%, var(--baseBackground) 88%, var(--baseBackground) 100%);
+  }
+
+  #main-super-page .main-page .main-patient-img {
+    height: 60vh;
+  }
+
+
+
+  /* ------------------- */
+  #main-user-page .info-wrap p:nth-child(1) {
+    font-size: 18px;
+    margin-bottom: 0px;
+    } 
+
   #main-user-page .info-wrap .name{
     width: 100%;
   }
 
-  #main-user-page .info-wrap p:nth-child(1) {
-    font-size: 18px;
-    margin-bottom: 0px;
-    }
+ 
   #main-user-page  p:nth-child(2) {
     font-size: 16px;
     }
@@ -2098,8 +2154,8 @@ footer .chat a {
 
   #main-super-page .the-footer .scroll-menu {
     min-width: 45vw;
-    bottom: 0px;
-    left: 1.1vw;
+    bottom: 6vh;
+    left: 3vw;
   }
 
   #main-super-page .scroll-menu .icon-back,
@@ -2166,8 +2222,16 @@ footer .chat a {
 
 @media screen and (min-width: 1024px) {
 
+  .js-focus-visible {
+    background-color: var(--baseBackground)!important;
+  }
+
   .container {
     max-width: 1300px;
+    width: 100vw;
+    height: 90vh!important;
+
+    overflow: hidden;
     background-color: var(--baseBackground);
     display: grid;
     grid-gap: 8px;
@@ -2198,8 +2262,12 @@ footer .chat a {
     padding-bottom: 15px;
   }
 
-  #main-header {
-    padding-bottom: 30px;
+  #main-header .nav-wrap {
+    padding: 20px 20px 20px 20px;
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 20px;
   }
 
   .user-page {
@@ -2382,9 +2450,9 @@ footer .chat a {
   }
 
   #main-super-page .the-footer .scroll-menu {
-    min-width: 36.5vw;
-    bottom: 0px;
-    left: 1.1vw;
+    min-width: 33vw;
+    bottom: 2vh;
+    left: 2.2vw;
   }
 
   #main-super-page .scroll-menu .icon-back,
@@ -2441,4 +2509,20 @@ footer .chat a {
     width: 60%;
     height: 60%;
   }
+}
+
+
+/*
+===================================================
+               tablet - media query >1300 Screens
+===================================================
+*/
+
+#main-header .nav-wrap {
+  padding: 20px 20px 40px 20px;
+  width: auto;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
