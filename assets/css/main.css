@@ -401,10 +401,6 @@ h1 {
   padding: 0px 20px 10px 20px;
 }
 
-.main-box {
-  margin-top: 10px;
-}
-
 .modal-main .more {
   font-size: 12px;
 }
@@ -736,17 +732,49 @@ footer .profile svg {
     display: none;
   }
 
-  .contact div h2 {
-    font-size: 0.9rem;
+  #main-user-page .info-wrap p:nth-child(1) {
+    font-size: 10px;
+    margin-bottom: 0px;
+    }
+  #main-user-page  p:nth-child(2) {
+    font-size: 12px;
+    }
+
+  .info1-block .interest,
+  .info1-block .lang,
+  .info1-block .contact {
+    margin-top: 3px;
   }
+
+
+  .info-wrap .contact {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .info-wrap .contact img {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  #main-user-page .info-wrap .contact .txt-ph {
+    margin-top: 0px;
+  }
+
+  #main-user-page .info-wrap .contact .txt-ph h2 {
+    font-size: 0.6rem;
+  }
+
+  #main-user-page  .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-left: 20px;
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+
   
 } 
-
-@media screen and (min-width: 375px) {
- 
-  .filter-box {
-    display: none;
-  }
 
 
 @media screen and (min-width: 500px) {
@@ -816,8 +844,23 @@ footer .profile svg {
 ===================================================
 */
 
+.user-page {
+  padding: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /*  Icons */
 
+
+#main-user-page .filter-box {
+  display: none;
+}
 
 .main-box .back-arrow {
   display: flex;
@@ -889,18 +932,6 @@ footer .profile svg {
 }
 
 
-.user-page {
-  padding: 0;
-  margin-top: -10px;
-  margin-left: -15px;
-  margin-right: -15px;
-  max-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
  .user-page .main-patient-img {
   background: url(https://via.placeholder.com/360x540/yellow) center/cover no-repeat white;
   width: 100%;
@@ -913,8 +944,8 @@ footer .profile svg {
 .user-page .info1-block {
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: calc(var(--vh, 1vh) * 4);
-  padding-bottom: 10px;
+/*   padding-top: calc(var(--vh, 1vh) * 4);
+  padding-bottom: 10px; */
 }
 
 .user-page .info1-block .info-wrap{
@@ -929,14 +960,14 @@ footer .profile svg {
 .info1-block .info-wrap p:nth-child(1) {
   color: var(--lightTextGray);
   margin-bottom: 5px;
-  font-size: calc(var(--vh, 1vh) * 1.5);
+  font-size: 13px;
 }
 .info1-block .info-wrap p:nth-child(2) {
   color: var(--gray);
-  margin-bottom: 10px;
-  font-size: calc(var(--vh, 1vh) * 2);
-  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 17px;
 }
+
 
 .info1-block .location {
   padding-left: 15%;
@@ -967,36 +998,39 @@ footer .profile svg {
 .contact {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
-.contact .icon-ph {
-  background: url(../img/present-icon.png) center/contain no-repeat white;
-  width: 20vw;
-  height: 20vw;
-  margin-bottom: 0;
-  border-radius: 0 0 15px 15px; overflow: hidden;
-  padding: 3px;
+.contact img {
+  width: 80px;
+  height: 80px;
 }
 
+.info1-block .interest,
+.info1-block .lang,
+.info1-block .contact {
+  margin-top: 3px;
+}
 
-
-.contact .txt-ph {
-  width: 55vw;
+#main-user-page .contact .txt-ph {
   margin-top: 0px;
 }
-
-.contact h2 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0px;
+#main-user-page .contact .txt-ph h2 {
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.contact .txt-ph p {
+#main-user-page .contact .txt-ph p {
   color: var(--lightTextGray);
-  margin-bottom: 5px;
+  margin-left: 20px;
   font-size: 0.8rem;
+  font-weight: 400;
 }
+
+
 
 /* 
 ====================== scroll menu =============
@@ -1085,6 +1119,96 @@ footer .profile svg {
   background-color: var(--orange);
 }
 
+
+@media screen and (min-width: 320px) {
+  
+
+  #main-user-page .info-wrap p:nth-child(1) {
+    font-size: 10px;
+    margin-bottom: 0px;
+    }
+  #main-user-page  p:nth-child(2) {
+    font-size: 12px;
+    }
+
+  .info1-block .interest,
+  .info1-block .lang,
+  .info1-block .contact {
+    margin-top: 3px;
+  }
+
+
+  .info-wrap .contact {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .info-wrap .contact img {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  #main-user-page .info-wrap .contact .txt-ph {
+    margin-top: 0px;
+  }
+
+  #main-user-page .info-wrap .contact .txt-ph h2 {
+    font-size: 0.6rem;
+  }
+
+  #main-user-page  .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-left: 20px;
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+}
+
+@media screen and (min-width: 375px) {
+  
+
+  #main-user-page .info-wrap p:nth-child(1) {
+    font-size: 14px;
+    margin-bottom: 0px;
+    }
+  #main-user-page  p:nth-child(2) {
+    font-size: 16px;
+    }
+
+  .info1-block .interest,
+  .info1-block .lang,
+  .info1-block .contact {
+    margin-top: 8px;
+  }
+
+
+  .info-wrap .contact {
+    margin-bottom: 18px;
+    margin-top: 18px;
+  }
+  .info-wrap .contact img {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  #main-user-page .info-wrap .contact .txt-ph {
+    margin-top: 0px;
+  }
+
+  #main-user-page .info-wrap .contact .txt-ph h2 {
+    font-size: 1rem;
+  }
+
+  #main-user-page  .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-left: 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+}
 
 @media screen and (min-width: 768px) {
 
@@ -2169,6 +2293,7 @@ footer .chat a {
     font-size: 16px;
     margin-bottom: 0px;
     }
+
   #main-user-page  p:nth-child(2) {
     font-size: 16px;
     }
