@@ -56,19 +56,18 @@
 ===================================================
                 Navegability
 ===================================================
-*/
-/* 
-.user-page {
-  display: none;
-}  */
-/* User page starts disabled 
-when the "more" <a> tag is clicked
-then class enabled is added to the class using javascript*/
 
-/* .super-page {
+/* On small screens, only main-super-page starts enabled */
+
+#main-header,
+#main-user-page,
+#main-menu-bar,
+/* #main-message-page, */
+#main-chat-page {
   display: none;
-} 
- */
+}
+
+
 .enabled {
   display: block;
 }
@@ -1317,8 +1316,6 @@ footer .profile svg {
 ===================================================
 */
 
-
-
 .modal-msg {
   display: flex;
   flex-direction: column;
@@ -1419,10 +1416,19 @@ footer .chat a {
 
 
 /* Fixing position for navbar, footer and message frame */
+
+
 .messages-page {
   background-color: var(--baseBackground);
   position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
 
+.page-header .nav-wrap {
+  padding: 20px;
 }
 
 .messages-page .nav-bar {
@@ -1436,7 +1442,7 @@ footer .chat a {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   padding-top: 10px;
   margin-top: 10px;
   background-color: white;
@@ -1655,6 +1661,91 @@ footer .chat a {
   transform: rotate(45deg);
   color: var(--lightTextGray);
 }
+
+/* ALternative nav-bar for big screens */
+
+
+.nav-wrap-big-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--baseBackground)
+}
+
+.search-user-wrap {
+  width: 70%;
+}
+
+.search-user-message {
+  width: 100%;
+}
+
+
+.search-user-message form input.send-text {
+  display: none;
+}
+
+.search-user-message form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-usr-box {
+  margin-right: 10px;
+}
+
+.search-usr-box i {
+  color: var(--lightTextGray);
+}
+
+
+.search-user-message form label:last-of-type {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: relative;
+}
+
+.search-user-message form label {
+  margin-bottom: 0;
+
+}
+.search-user-message form input.input-frame {
+  width: 100%;
+  height: 33px;
+}
+
+.search-user-message form input.input-frame:focus {
+  outline: none;
+}
+
+.search-user-message form input.input-frame::placeholder {
+  color: var(--lightTextGray);
+  font-size: 13px;
+}
+
+.search-user-icon{
+  width: 36px;
+  height: 36px;
+  background-color: var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 3%;
+}
+
+.search-user-icon svg {
+  height: 80%;
+  width: 80%;
+  fill: white;
+}
+
 
 
 
@@ -1911,6 +2002,7 @@ footer .chat a {
 
 @media screen and (min-width: 768px) {
 
+
   .container {
     max-width: 1300px;
     height: 100vh!important;
@@ -1928,6 +2020,8 @@ footer .chat a {
   .item2 {grid-area: col2;}
   .item3 {grid-area: col3;}
 
+
+  
   .menu-bar {
     display: none;
   }
@@ -1938,6 +2032,14 @@ footer .chat a {
 
   #main-header-sm {
     display: none;
+  }
+
+  #main-user-page {
+    display: flex;
+  }
+
+  #main-super-page {
+    display: flex;
   }
 
   #main-header .navbar {
@@ -2248,7 +2350,7 @@ footer .chat a {
 
 
 
-  .menu-bar {
+  #main-menu-bar {
     display: block;
     width: 100%;
     margin: 0 auto;
