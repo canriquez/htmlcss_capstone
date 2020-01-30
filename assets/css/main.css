@@ -180,7 +180,7 @@ h1 {
 /* Single padding  */
 
 .page-header {
-  padding: 20px 20px 10px 20px;
+  padding: 0px 20px 10px 20px;
   width: 100%;
 }
 
@@ -205,7 +205,7 @@ h1 {
   display: flex;
   justify-content: center;
   width: 30%;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 700;
   font-family: 'Francois One', sans-serif;
 }
@@ -514,7 +514,7 @@ h1 {
 .main-page .main-patient-img {
   margin-top: 10px;
   background: url(../img/patient/child_05_large.jpg) center/cover no-repeat white;
-/*   height: 60vh; */
+  height: 60vh;
   margin-bottom: 0;
   border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
 }
@@ -525,14 +525,14 @@ h1 {
   justify-content: centered;
 
   position: absolute;
-  top: 8vw;
-  right: 3.5vw;
+  top: 8%;
+  right: 5%;
 }
 
 .main-box .pic-roll div {
-  margin: 1vw;
-  width: 3.4vw;
-  height: 3.4vw;
+  margin: 4px;
+  width: 12px;
+  height: 12px;
   background-color: var(--lightTextGray2);
   border: 0px solid rgb(254,254,254); border-radius: 3px; overflow: hidden;
 }
@@ -544,8 +544,8 @@ h1 {
 .main-box .map-arrow {
   display: flex;
   position: absolute;
-  top: 8vw;
-  left: 3.5vw;
+  top: 8%;
+  left: 5%;
   color: white;
   align-items: center;
   font-size: 0.7rem;
@@ -553,7 +553,7 @@ h1 {
 }
 
 .main-box .map-arrow span {
-  margin-left: 2vw;
+  margin-left: 10px;
 }
 
 
@@ -561,8 +561,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6vw;
-  height: 6vw;
+  width: 20px;
+  height: 20px;
 }
 
 .main-box .map-arrow svg {
@@ -726,13 +726,7 @@ footer .profile svg {
 
 /* modal positioning */
 
-/* .modal-main {
-  position: absolute;
-  left:12.5vw;
-  bottom: 13vh;
-}
 
- */
 @media screen and (min-width: 320px) {
   
   /* Images film solution */
@@ -754,8 +748,7 @@ footer .profile svg {
   /* ================= */
 
   .main-page .main-patient-img {
-    height: calc(var(--vh)*50);
-
+    height: 50vh;
   }
 
   .filter-box {
@@ -1347,6 +1340,19 @@ footer .profile svg {
 ===================================================
 */
 
+#main-message-page .main-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0px 20px 10px 20px;
+}
+
+#main-message-page .msg-frame {
+  width: 100%;
+}
+
 
 /* On standard mobile view, we turn off big screen's nav and footer */
 .nav-bar .nav-wrap-big-view {
@@ -1372,8 +1378,9 @@ footer .profile svg {
   flex-direction: column;
   margin: 10px auto;
   height: auto;
-  max-height: 20vh;
-  min-width: 80vw;
+ /*  max-height: 20vh; */
+ /*  min-width: 80vw; */
+ height: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px; overflow: hidden;
   overflow: hidden;
@@ -1493,6 +1500,7 @@ footer .profile a {
 .msg-frame {
   margin-top: 21%;
   margin-bottom: 100px;
+  width: 100%;
 }
 
 /* ALternative nav-bar for big screens */
@@ -1887,9 +1895,6 @@ footer .f-wrap-big-screen  div:hover {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 374px) {
-
-}
 
 
 /*
@@ -2144,6 +2149,10 @@ footer .f-wrap-big-screen  div:hover {
 
   #main-super-page {
     display: flex;
+  }
+
+  .nav-wrap .logo-text {
+    font-size: 50px;
   }
 
   #main-header .navbar {
