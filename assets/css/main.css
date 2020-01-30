@@ -205,9 +205,9 @@ h1 {
   display: flex;
   justify-content: center;
   width: 30%;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Francois One', sans-serif;
 }
 .nav-wrap .logo-text span:nth-child(1) {
   color: var(--purple);
@@ -513,7 +513,7 @@ h1 {
 
 .main-page .main-patient-img {
   margin-top: 10px;
-  background: url(https://via.placeholder.com/360x540/) center/cover no-repeat white;
+  background: url(../img/patient/child_05_large.jpg) center/cover no-repeat white;
 /*   height: 60vh; */
   margin-bottom: 0;
   border: 0px solid rgb(254,254,254); border-radius: 10px; overflow: hidden;
@@ -968,7 +968,7 @@ footer .profile svg {
 
 
  .user-page .main-patient-img {
-  background: url(https://via.placeholder.com/360x540/yellow) center/cover no-repeat white;
+  background: url(../img/patient/child_05_large.jpg) center/cover no-repeat white;
   width: 100%;
   height: calc(var(--vh, 1vh) * 50);
   margin-bottom: 0;
