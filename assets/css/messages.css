@@ -2816,6 +2816,10 @@ footer .f-wrap-big-screen  div:hover svg{
        width: 28px;
    }
 
+   .modal-msg .msg-wrap .text-box {
+       padding: 9px;
+   }
+
      /* Enabling detail-chat page components */
 
    #main-chat-page {
