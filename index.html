@@ -1512,23 +1512,6 @@
     <!-- Page Navigability  -->
 
 
-    <script>
-        jQuery(document).ready(function ($) {
-
-
-
-            var alterClass = function () {
-                var ww = document.body.clientWidth;
-                if (ww >= 768) {
-                    console.log('screen is 768 or more');
-                    $('.test').removeClass('blue');
-                } else if (ww >= 401) {
-                    $('.test').addClass('blue');
-                };
-            };
-
-        });
-    </script>
 
     <!-- Working with VH variable to manage full heigh view -->
 
@@ -1557,6 +1540,11 @@
                     myElementShow.style.display = "";
                     myElementHyde2.style.display = "";
                     myElementHyde3.style.display = "";
+
+                    const element = document.querySelector("#general-layout");
+                    element.classList.remove("layout-user-page");
+                    element.classList.remove("layout-message-page");
+                    console.log ('removed user an message classes')
                 }
             });
 
@@ -1654,6 +1642,11 @@
                 event.preventDefault();
                 // Log the clicked element in the console
                 console.log("You clicked -link-user-layout- class");
+
+                const element = document.querySelector("#general-layout");
+                element.classList.add("layout-user-page");
+                element.classList.remove("layout-message-page");
+
                 var myElementShow1 = document.getElementById("main-super-page");
                 var myElementShow2 = document.getElementById("main-user-page");
 
@@ -1671,6 +1664,12 @@
                 event.preventDefault();
                 // Log the clicked element in the console
                 console.log("You clicked -link-to-message-layout- class");
+                
+                const element = document.querySelector("#general-layout");
+                element.classList.add("layout-message-page");
+                element.classList.remove("layout-user-page");
+
+
                 var myElementShow1 = document.getElementById("main-message-page");
                 var myElementShow2 = document.getElementById("main-chat-page");
 

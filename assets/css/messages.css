@@ -78,9 +78,11 @@
 }
 
 .layout-message-page {
+    grid-template-columns: 30% 25% 45%!important;
+}
 
-    grid-template-columns: 30% 235% 45%!important;
-
+.layout-user-page {
+    grid-template-columns: 30% 40% 30%!important;
 }
 
 /*
