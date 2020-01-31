@@ -2265,8 +2265,10 @@ footer .f-wrap-big-screen  div:hover svg{
   }
 
   .contact img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
 
@@ -2505,6 +2507,253 @@ footer .f-wrap-big-screen  div:hover svg{
     margin-right: -15px;
     margin-bottom: 20px;
   }
+
+/* +++++++++++++++++++++++ recoup old main.css */
+
+.user-page {
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-right: 0px;
+
+  }
+
+  #main-user-page .add1 {
+    display: block;
+    background-color: white;
+    width: 90%;
+    margin: 0px 15px 0px 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  #main-user-page .add1 .contact {
+    margin-top: 0px;
+  }
+  
+  #main-user-page .add1 .contact img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #main-user-page .add1 .contact .txt-ph {
+    margin-left: 8px;
+  }
+  #main-user-page .add1 .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+  }
+
+  .filter-box {
+    display: inline-block;
+  }
+
+  header nav {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+  } 
+
+  header nav .nav-wrap {
+    padding: 15px 18px;
+    width: 100vw;
+  }
+
+  .nav-right .user-picture i {
+    margin-right: 0;
+  }
+
+  #main-user-page .filter-box {
+    margin: 0px 15px 5px 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #main-user-page .filter-box .contact {
+    margin-top: 0px;
+  }
+
+
+  #main-user-page .info1-block {
+    padding: 10px 15px 5px 15px;
+    background-color: white;
+    margin: 0 15px 15px 15px;
+  }
+
+
+  .contact h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .contact img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #main-user-page .info-wrap .name{
+    width: 100%;
+  }
+
+  #main-user-page .info-wrap p:nth-child(1) {
+    font-size: 16px;
+    margin-bottom: 0px;
+    }
+
+  #main-user-page  p:nth-child(2) {
+    font-size: 16px;
+    }
+
+  #main-user-page .name p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  }
+
+  #main-user-page .name p:nth-child(2)::after {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    font-size: 20px;
+  }
+
+  #main-user-page .info-wrap .location {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .icon_target {
+    position: relative;
+  }
+
+  .icon_target span {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--purple);
+    border-radius: 10px;
+    background-image: url(../svg/0_aim.svg);
+    fill: white;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+
+
+  .info1-block .contact .txt-ph h2 {
+    margin-left: 20px;
+  }
+
+  .info1-block .name {
+    position: relative;
+  }
+
+  .info1-block .name::after {
+    content: '';
+    width: 120%;
+    margin-left: -px;
+    margin-right: -15px;
+    border-bottom: solid 1px var(--baseBackground);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    z-index: 1;
+  }
+
+  .info1-block .interest,
+  .info1-block .lang,
+  .info1-block .contact {
+    margin-top: 3px;
+  }
+
+  #main-user-page .info-wrap .contact .txt-ph {
+    margin-top: 0px;
+  }
+
+  #main-user-page .info-wrap .contact .txt-ph p {
+    color: var(--lightTextGray);
+    margin-left: 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+
+  .film-wrap div:nth-child(7),
+  .film-wrap div:nth-child(8) {
+    display: none;
+  }
+
+  #main-super-page .the-footer .scroll-menu {
+    width: 88%;
+    bottom: 2vh;
+    left: 2.2vw;
+  }
+
+  #main-super-page .scroll-menu .icon-back,
+  #main-super-page .scroll-menu .icon-fwd {
+    width: 10vw;
+    height: 10vw;
+    max-height: 60px;
+    max-width: 60px;
+  }
+
+  #main-super-page .scroll-menu .icon-heart,
+  #main-super-page .scroll-menu .icon-kill  {
+    width: 15vw;
+    height: 15vw;
+    max-height: 80px;
+    max-width: 80px;
+  }
+
+/* pic-roll sizes */
+
+  .main-box .pic-roll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 3vw;
+    right: 2.5vw;
+  }
+
+  .main-box .pic-roll div {
+    margin: 0.4vw;
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+
+  .main-box div .selected {
+    background-color: var(--orange);
+  }
+
+  .main-box .map-arrow {
+    top: 3vw;
+    left: 2.0vw;
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .main-box .map-arrow span {
+    margin-left: 0vw;
+  }
+
+  .main-box .map-arrow svg {
+    width: 60%;
+    height: 60%;
+  }
+
+
+/* +++++++++++++++++++++++end- recopu old main.css ____ */
+
+
 
    /* Enabling message page components */
    #main-message-page {
