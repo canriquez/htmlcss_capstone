@@ -59,6 +59,7 @@
 
 /* On small screens, only main-super-page starts enabled */
 
+
 #main-header,
 #main-user-page,
 #main-menu-bar,
@@ -74,6 +75,12 @@
 
 .disabled {
   display: none;
+}
+
+.layout-message-page {
+
+    grid-template-columns: 30% 235% 45%!important;
+
 }
 
 /*
@@ -1627,6 +1634,14 @@ footer .f-wrap-big-screen  div:hover {
   border-top: 3px solid var(--purple);
 }
 
+footer .f-wrap-big-screen  div:nth-child(3) {
+    border-right: none;
+}
+
+footer .f-wrap-big-screen  div:hover svg{
+    fill: var(--purple);    
+} 
+
 
 /* ========================== */
 
@@ -1683,17 +1698,6 @@ footer .f-wrap-big-screen  div:hover {
   position: relative;
 }
 
-.chat-frame .icon-person {
-  background: url(https://via.placeholder.com/40x40/) center/cover no-repeat white;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0;
-  border: 0px solid rgb(254,254,254); 
-  border-radius: 100%; 
-  overflow: hidden;
-  display: none;  
-  /* default: not showing on mobile screen */
-}
 
 .chat-wrap .chat-text {
   display: flex;
@@ -2450,7 +2454,7 @@ footer .f-wrap-big-screen  div:hover {
     background-color: var(--baseBackground);
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 30% 25% 45%;
     grid-template-areas: 
     "navbar navbar navbar"
     "col1 col2 col3"
@@ -2458,8 +2462,8 @@ footer .f-wrap-big-screen  div:hover {
 
   .navbar {grid-area: navbar;}
   .item1 {grid-area: col1;}
-/*   .item2 {grid-area: col2;}
-  .item3 {grid-area: col3;} */
+  .item2 {grid-area: col2;}
+  .item3 {grid-area: col3;}
   .item4 {grid-area: col2;}
   .item5 {grid-area: col3;}
   
@@ -2537,7 +2541,7 @@ footer .f-wrap-big-screen  div:hover {
 
    #main-message-page .the-footer {
        position: relative;
-       bottom: 1%;
+       bottom: 2%;
        left: 0;
        margin: 0 0;
        padding: 0;
@@ -2548,11 +2552,64 @@ footer .f-wrap-big-screen  div:hover {
        display: flex;
    }
    #main-message-page .f-wrap-big-screen a {
-       margin-top: 10px;
-       margin-bottom: 10px;
+       margin-top: 15px;
+       margin-bottom: 15px;
        height: 28px;
        width: 28px;
    }
+
+     /* Enabling detail-chat page components */
+
+   #main-chat-page {
+       display: block;
+       border-left: 1px solid var(--baseBackground);
+   }
+
+   #main-chat-page .page-header {
+       width: 100%;
+
+   }
+   #main-chat-page .nav-bar {
+       position: relative;
+       width: 100%;
+       margin-left: 0;
+       margin-right: 0;
+   }
+
+   #main-chat-page .nav-bar .nav-wrap {
+       width: 100%;
+       display: flex;
+   }
+
+   #main-chat-page .main-page {
+    padding: 0;
+    height: 62vh;
+   }
+
+   #main-chat-page .chat-frame {
+    margin: 0;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 15vh;
+    overflow-y: scroll;
+    height: 100%;
+    }
+
+    #main-chat-page .the-footer {
+        position: relative;
+        bottom: 1.7%;
+        left: 0;
+        margin: 0 0;
+        padding: 10px;
+        width: 100%;
+        border-top: 1px solid var(--baseBackground);
+    }
+
+    #main-chat-page  img.icon-person {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 
 
 
@@ -2569,7 +2626,7 @@ footer .f-wrap-big-screen  div:hover {
 
 
   #main-header .nav-wrap {
-    padding: 40px 20px 40px 20px;
+    padding: 10px 20px 10px 20px;
     width: auto;
     margin-left: -15px;
     margin-right: -15px;
