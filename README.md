@@ -79,7 +79,7 @@ General navigability solution:
 
 - HTML5, CSS3, Java Script
 - Bootstrap (only containers)
-- technologies used
+- Visual Code
 
 ## Live Demo
 
