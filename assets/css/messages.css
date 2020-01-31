@@ -2831,6 +2831,9 @@ footer .f-wrap-big-screen  div:hover svg{
        width: 100%;
 
    }
+
+    /* Adjusting main-chat section navbar */
+
    #main-chat-page .nav-bar {
        position: relative;
        width: 100%;
@@ -2839,9 +2842,39 @@ footer .f-wrap-big-screen  div:hover svg{
    }
 
    #main-chat-page .nav-bar .nav-wrap {
+       display: none;
+   } 
+
+   #main-chat-page .nav-bar .nav-wrap-big-screen {
        width: 100%;
        display: flex;
    }
+
+
+   #main-chat-page .menu-dots span,
+   #main-chat-page .menu-dots::before,
+   #main-chat-page .menu-dots::after {
+        content: '';
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        vertical-align: middle;
+        width: 6px;
+        height: 6px;
+        background-color: var(--lightTextGray2);
+        border-radius: 50%;
+   }
+
+   #main-chat-page .chat-name span {
+       display: block;
+       text-align: center;
+   }
+
+   #main-chat-page .chat-name span:last-child {
+       color: var(--lightTextGray2);
+       font-size: 13px;
+       font-weight: 200;
+   }
+
 
    #main-chat-page .main-page {
     padding: 0;
@@ -2917,6 +2950,10 @@ footer .f-wrap-big-screen  div:hover svg{
         padding-bottom: 0px;
     }
 
+   
+
+
+
 }
 
 
@@ -2925,28 +2962,3 @@ footer .f-wrap-big-screen  div:hover svg{
                tablet - media query >1300 Screens
 ===================================================
 */
-
-@media screen and (min-width: 1300px) {
-
-
-  #main-header .nav-wrap {
-    padding: 10px 20px 10px 20px;
-    width: auto;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .add2 .contact {
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .filter-box .contact {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-
-}
