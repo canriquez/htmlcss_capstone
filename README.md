@@ -3,7 +3,7 @@
 > The project is about building an HTML & CSS project for a social network site, based on a design design idea by [Vlad Ermakov on Dribbble ](https://dribbble.com/ermalength).
 
 
-![screenshot](./assets/app_screenshot.png)
+![screenshot](assets/app_screenshot.png)
 
 
 > The original design specification can be found here [Swipex @Behance.net](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
@@ -13,7 +13,7 @@
 
 The original design considers a dating social network.I have used the original design and followed the capstone project challenge to redefine the social network for my solution. 
 
-In my project I considered the concept of servicing a charity branch in a private organization ([Rayces](https://rayces.com)), that offers educational services and medical therapy for children patients with learning disabilities. This company has private patients and my novel idea is that in addition, the organization creates a charity branch that gives free treatment to a small number of children using funds from the private company itself, but also from fund rising campaigns organised by the company. This social network targets to families an individuals that want to donate money to fund the treatment of childre patients. The network gives the chance for the donors to get in touch with the children's tutors, and recieve information about the treatment progres, health checkup updates and chat meessaging contact between the donor and the children's tutor. This network could be also applied to the private patients to get the benefit of a centralised system for tutors to get informati0n about their children treatment progress. 
+In my project I considered the concept of servicing a charity branch in a private organization ([Rayces](https://rayces.com)), that offers educational services and medical therapy for children patients with learning disabilities. This company has private patients and my novel idea is that in addition, the organization creates a charity branch that gives free treatment to a small number of children using funds from the private company itself, but also from fund rising campaigns organised by the company. This social network targets to families an individuals that want to donate money to fund the treatment of childre patients. The network gives the chance for the donors to get in touch with the children's tutors, and recieve information about the treatment progres, health checkup updates and chat meessaging contact between the donor and the children's tutor. This network could be also applied to the private patients to get the benefit of a centralised system for tutors to get information about their children treatment progress. 
 
 ## Application Engineering - Key Notes
 
@@ -21,7 +21,7 @@ In my project I considered the concept of servicing a charity branch in a privat
 - Main page has a navbar and footer and a modal box with user information for all mobile screens up to 767px screens.
 - For screens bigger than 768, screen would loose its modal box, footprint and the "scroll menu" would appear at the bottom of the image, absolute positioned relative to the main image container.
 
- >film reel of main page
+ >Main page's film reel
 
 - Main page has a film reel with pictures that should be shown in all mobile screens. For this requirement I have used a flex box, that would adjust the bases of each element according to the available space. Each picture has small paddings that ensures a visible gap between them. The small cancel icon shown for the image in focus, has been build with a pseudo code after the image wrap, and absolute positioned relative to the in-focus image wrap. Top and bottom parameter are adjusted depending on the screen sizes. 
 - For screens less than 320 px, in-focus image is shown and additional 3 pictures.
@@ -33,7 +33,7 @@ From 768 px screens onwards, in-focus image and additional 6 pictures are shown 
 Problem: We need each page to contain 100% of the view port's height, so we have a typical app UX.
 For this problem, the solution applied was, using 100% of view port's height using flex.
 - So, I defined a container, with a display type  flex  with column direction, using a height of 100vh, and making sure I use no margins top or bottom in the container. Any margin at all, would create an overflow that would break the container 100vh definition.
-- This solution, allows, for any sub-container to be aligned using flex properties, and making sure all the content would fit in the current viewport's size/
+- This solution, allows, for any sub-container to be aligned using flex properties, and making sure all the content would fit in the current viewport's size.
 
 
 > Main hero image on user pages
