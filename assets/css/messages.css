@@ -1349,6 +1349,14 @@ footer .profile svg {
 ===================================================
 */
 
+
+/* display=none nav-wrap-big-screens for mobile media*/
+
+#main-chat-page .nav-bar .nav-wrap-big-screen {
+    display: none;
+}
+
+
 #main-message-page .main-page {
     display: flex;
     flex-direction: column;
@@ -2848,6 +2856,10 @@ footer .f-wrap-big-screen  div:hover svg{
    #main-chat-page .nav-bar .nav-wrap-big-screen {
        width: 100%;
        display: flex;
+   }
+
+   #main-chat-page .fnc-phone i {
+       color: var(--lightTextGray2);
    }
 
 
