@@ -15,7 +15,7 @@ The original design considers a dating social network. I have used the original 
 
 In my project, I considered the concept of servicing a charity branch in a private organization ([Rayces](https://rayces.com)), that offers educational services and medical therapy for children patients with learning disabilities. This company has children patients, and my novel idea is that also, the organization creates a charity branch that gives free treatment to a small number of children using funds from the private company itself but also funds rising campaigns organized by the company. This social network targets families an individuals that want to donate money to support the treatment of children patients. The network gives a chance for the donors to get in touch with the children's tutors, and receive information about the treatment progress, health checkup updates, and chat messaging contact between the donor and the children's tutor. This network could also be applied to private patients to get the benefit of a centralized system for tutors to get information about their children's treatment progress.
 
-Follow the following link for my [project's video presentation ](https://www.loom.com/share/7d8ac4a874cc485cadc30eb9015a7320)
+Follow this link for my [project's video presentation ](https://www.loom.com/share/7d8ac4a874cc485cadc30eb9015a7320)
 
 ## Application Engineering - Key Notes
 
