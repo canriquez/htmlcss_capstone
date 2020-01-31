@@ -59,6 +59,7 @@
 
 /* On small screens, only main-super-page starts enabled */
 
+
 #main-header,
 #main-user-page,
 #main-menu-bar,
@@ -74,6 +75,14 @@
 
 .disabled {
   display: none;
+}
+
+.layout-message-page {
+    grid-template-columns: 30% 25% 45%!important;
+}
+
+.layout-user-page {
+    grid-template-columns: 30% 40% 30%!important;
 }
 
 /*
@@ -386,6 +395,8 @@ h1 {
     margin-left: 25px;
   }
 }
+
+
 
 /*
 ===================================================
@@ -1340,6 +1351,14 @@ footer .profile svg {
 ===================================================
 */
 
+
+/* display=none nav-wrap-big-screens for mobile media*/
+
+#main-chat-page .nav-bar .nav-wrap-big-screen {
+    display: none;
+}
+
+
 #main-message-page .main-page {
     display: flex;
     flex-direction: column;
@@ -1627,6 +1646,14 @@ footer .f-wrap-big-screen  div:hover {
   border-top: 3px solid var(--purple);
 }
 
+footer .f-wrap-big-screen  div:nth-child(3) {
+    border-right: none;
+}
+
+footer .f-wrap-big-screen  div:hover svg{
+    fill: var(--purple);    
+} 
+
 
 /* ========================== */
 
@@ -1683,17 +1710,6 @@ footer .f-wrap-big-screen  div:hover {
   position: relative;
 }
 
-.chat-frame .icon-person {
-  background: url(https://via.placeholder.com/40x40/) center/cover no-repeat white;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0;
-  border: 0px solid rgb(254,254,254); 
-  border-radius: 100%; 
-  overflow: hidden;
-  display: none;  
-  /* default: not showing on mobile screen */
-}
 
 .chat-wrap .chat-text {
   display: flex;
@@ -1753,6 +1769,12 @@ footer .f-wrap-big-screen  div:hover {
   margin: 0;
   margin-bottom: 18px;
   color: var(--lightTextGray);
+}
+
+/* disabling chat icon-person images for small screens */
+
+.chat-frame .icon-person {
+    display: none;
 }
 
 
@@ -1935,6 +1957,7 @@ footer .f-wrap-big-screen  div:hover {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  padding-right: 10px;
 }
 
 .menu-row a {
@@ -2252,8 +2275,10 @@ footer .f-wrap-big-screen  div:hover {
   }
 
   .contact img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
 
@@ -2449,7 +2474,7 @@ footer .f-wrap-big-screen  div:hover {
     overflow: hidden;
     background-color: var(--baseBackground);
     display: grid;
-    grid-gap: 8px;
+    grid-gap: 0px;
     grid-template-columns: 30% 40% 30%;
     grid-template-areas: 
     "navbar navbar navbar"
@@ -2460,7 +2485,9 @@ footer .f-wrap-big-screen  div:hover {
   .item1 {grid-area: col1;}
   .item2 {grid-area: col2;}
   .item3 {grid-area: col3;}
-
+  .item4 {grid-area: col2;}
+  .item5 {grid-area: col3;}
+  
 
 
   #main-menu-bar {
@@ -2485,7 +2512,227 @@ footer .f-wrap-big-screen  div:hover {
     margin-bottom: 20px;
   }
 
-  .user-page {
+
+
+
+   /* Enabling message page components */
+   #main-message-page {
+    display: block;
+    position: relative;
+}
+
+   #main-message-page .mobile-view {
+        display: none;
+   }
+
+   #main-message-page .nav-wrap-big-view {
+       display:flex;
+   }
+
+   #main-message-page .nav-bar {
+    position: relative;
+    width: 100%;
+    margin: 0;
+   }
+   #main-message-page .main-page {
+       padding: 0;
+       height: 62vh;
+   }
+
+   #main-message-page .msg-frame {
+       margin: 0;
+       scroll-snap-type: y proximity;
+       scroll-padding-top: 15vh;
+       overflow-y: scroll;
+       height: 100%;
+   }
+   #main-message-page .msg-frame .modal-msg {
+       scroll-snap-align: start;
+       margin-top: 0;
+       margin-bottom: 0;
+       border-radius: 0px;
+       box-shadow: none;
+       border-bottom: 2px solid var(--baseBackground);
+       height: auto;
+       max-height: auto;
+   }
+
+   #main-message-page .the-footer {
+       position: relative;
+       bottom: 2%;
+       left: 0;
+       margin: 0 0;
+       padding: 0;
+       width: 100%;
+       border-top: 1px solid var(--baseBackground);
+   }
+   #main-message-page .the-footer .f-wrap-big-screen {
+       display: flex;
+   }
+   #main-message-page .f-wrap-big-screen a {
+       margin-top: 15px;
+       margin-bottom: 15px;
+       height: 28px;
+       width: 28px;
+   }
+
+   .modal-msg .msg-wrap .text-box {
+       padding: 9px;
+   }
+
+     /* Enabling detail-chat page components */
+
+   #main-chat-page {
+       display: block;
+       border-left: 1px solid var(--baseBackground);
+   }
+
+   #main-chat-page .page-header {
+       width: 100%;
+
+   }
+
+    /* Adjusting main-chat section navbar */
+
+   #main-chat-page .nav-bar {
+       position: relative;
+       width: 100%;
+       margin-left: 0;
+       margin-right: 0;
+   }
+
+   #main-chat-page .nav-bar .nav-wrap {
+       display: none;
+   } 
+
+   #main-chat-page .nav-bar .nav-wrap-big-screen {
+       width: 100%;
+       display: flex;
+   }
+
+   #main-chat-page .fnc-phone i {
+       color: var(--lightTextGray2);
+   }
+
+
+   #main-chat-page .menu-dots span,
+   #main-chat-page .menu-dots::before,
+   #main-chat-page .menu-dots::after {
+        content: '';
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        vertical-align: middle;
+        width: 6px;
+        height: 6px;
+        background-color: var(--lightTextGray2);
+        border-radius: 50%;
+   }
+
+   #main-chat-page .chat-name span {
+       display: block;
+       text-align: center;
+   }
+
+   #main-chat-page .chat-name span:last-child {
+       color: var(--lightTextGray2);
+       font-size: 13px;
+       font-weight: 200;
+   }
+
+
+   #main-chat-page .main-page {
+    padding: 0;
+    height: 62vh;
+   }
+
+   #main-chat-page .chat-frame {
+    margin: 0;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 15vh;
+    overflow-y: scroll;
+    height: 100%;
+    }
+
+    #main-chat-page .the-footer {
+        position: relative;
+        bottom: 1.7%;
+        left: 0;
+        margin: 0 0;
+        padding: 10px;
+        width: 100%;
+        border-top: 1px solid var(--baseBackground);
+    }
+
+    /* adding img.icon-person to the detail chat */
+
+    #main-chat-page  img.icon-person {
+        display: block;
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #main-chat-page .modal-chat {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 40%;
+    }
+
+    #main-chat-page .modal-chat img {
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+    #main-chat-page .modal-chat-answer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+
+    #main-chat-page .modal-chat-answer img {
+        margin-top: 8px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    #main-chat-page .modal-chat-answer .chat-art {
+        margin-left: 40px;
+    }
+
+    /* Menu-bar adjustments */
+
+    .add2 .contact {
+        margin-bottom: 5px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+      }
+
+    .add2 .icon-cog {
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+
+     /* enabling the right order on start */
+
+        #main-message-page {
+        display: none;
+        }
+        #main-chat-page {
+        display: none;
+        }
+    
+        #main-super-page {
+        display: flex;
+        }
+        #main-user-page {
+        display: flex;
+        }
+
+        /* +++++++++++++++++++++++ recoup old main.css */
+
+.user-page {
     margin-top: 0px;
     margin-left: -10px;
     margin-right: 0px;
@@ -2724,6 +2971,11 @@ footer .f-wrap-big-screen  div:hover {
     width: 60%;
     height: 60%;
   }
+
+
+
+/* +++++++++++++++++++++++end- recopu old main.css ____ */
+
 }
 
 
@@ -2732,28 +2984,3 @@ footer .f-wrap-big-screen  div:hover {
                tablet - media query >1300 Screens
 ===================================================
 */
-
-@media screen and (min-width: 1300px) {
-
-
-  #main-header .nav-wrap {
-    padding: 40px 20px 40px 20px;
-    width: auto;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .add2 .contact {
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .filter-box .contact {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-
-}
