@@ -2627,6 +2627,23 @@ footer .f-wrap-big-screen  div:hover svg{
         margin-left: 10px;
     }
 
+    #main-chat-page .modal-chat-answer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+
+    #main-chat-page .modal-chat-answer img {
+        margin-top: 8px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    #main-chat-page .modal-chat-answer .chat-art {
+        margin-left: 40px;
+    }
+
 
 
 
