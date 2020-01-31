@@ -3,7 +3,7 @@
 > The project is about building an HTML & CSS project for a social network site, based on a design design idea by [Vlad Ermakov on Dribbble ](https://dribbble.com/ermalength).
 
 
-![screenshot](assets/app_screenshot.png)
+![screenshot](assets/img/app_screenshot.png)
 
 
 > The original design specification can be found here [Swipex @Behance.net](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
