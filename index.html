@@ -1565,6 +1565,27 @@
                     element.classList.remove("layout-message-page");
                     console.log ('removed user an message classes')
                 }
+                /* ONLY FOR TESTS - code below
+                Makes sure that we eliminate the meesage-layout / user-layout 
+                if we are resizing from pc to mobile after tested pc message 
+                to user layout and back */
+
+                if (iw <768) {
+                    const element = document.querySelector("#general-layout");
+                    if (element.classList.contains("layout-user-page")){
+                        console.log('yes, user-layout class exists')
+                        element.classList.remove("layout-user-page");
+                        var myElementHyde = document.getElementById("main-user-page");
+                        myElementHyde.style.display = "none";
+                    }
+                    if (element.classList.contains("layout-message-page")){
+                        console.log('yes, message-layout class exists')
+                        element.classList.remove("layout-message-page");
+                        var myElementHyde = document.getElementById("main-chat-page");
+                        myElementHyde.style.display = "none";
+                    }
+                }
+
             });
 
             $('.learn-more').click(function (event) {
