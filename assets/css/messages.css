@@ -1941,6 +1941,7 @@ footer .f-wrap-big-screen  div:hover svg{
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  padding-right: 10px;
 }
 
 .menu-row a {
@@ -2606,12 +2607,29 @@ footer .f-wrap-big-screen  div:hover svg{
         border-top: 1px solid var(--baseBackground);
     }
 
+    /* adding img.icon-person to the detail chat */
+
     #main-chat-page  img.icon-person {
         width: 45px;
         height: 45px;
         object-fit: cover;
         border-radius: 50%;
     }
+
+    #main-chat-page .modal-chat {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 40%;
+    }
+
+    #main-chat-page .modal-chat img {
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+
+
+
+
 
 
 
