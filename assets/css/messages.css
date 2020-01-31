@@ -2900,6 +2900,19 @@ footer .f-wrap-big-screen  div:hover svg{
         margin-left: 40px;
     }
 
+    /* Menu-bar adjustments */
+
+    .add2 .contact {
+        margin-bottom: 5px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+      }
+
+    .add2 .icon-cog {
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+
 }
 
 
