@@ -91,6 +91,12 @@
 ===================================================
 */
 
+#main-super-page h2,
+#main-message-page h6,
+#main-chat-page h6 {
+  display: none;
+}
+
 .super-page {
     display: flex;
     flex-direction: column;
@@ -1553,11 +1559,11 @@ footer .profile a {
   align-items: center;
 }
 
-.search-usr-box {
+.search-user-message {
   margin-right: 10px;
 }
 
-.search-usr-box i {
+.search-user-message i {
   color: var(--lightTextGray);
 }
 
@@ -1808,7 +1814,7 @@ footer .f-wrap-big-screen  div:hover svg{
   align-items: center;
 }
 
-.chat-message form .send-btn {
+.chat-message form label i {
   width: 36px;
   height: 36px;
   background-color: var(--purple);
@@ -1847,7 +1853,7 @@ footer .f-wrap-big-screen  div:hover svg{
   font-weight: 200;
 }
 
-.chat-message .smily {
+.chat-message label a {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -1855,14 +1861,14 @@ footer .f-wrap-big-screen  div:hover svg{
   bottom: 24%;
 }
 
-.chat-message .smily svg {
+.chat-message label svg {
   height: 100%;
   width: 100%;
   fill: var(--lightTextGray);
 }
 
 
-.chat-message .send-btn i {
+.chat-message form label i {
   transform: rotate(-90deg);
   color: white;
   font-weight: 700;
