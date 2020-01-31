@@ -1548,6 +1548,7 @@ footer .profile a {
 .search-user-message form input.input-frame {
   width: 100%;
   height: 33px;
+  border: none;
 }
 
 .search-user-message form input.input-frame:focus {
@@ -1791,6 +1792,7 @@ footer .f-wrap-big-screen div:hover svg {
 .chat-message form input.input-frame {
   width: 80%;
   height: 33px;
+  border: none;
 }
 
 .chat-message form input.input-frame:focus {
