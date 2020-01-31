@@ -1761,6 +1761,12 @@ footer .f-wrap-big-screen  div:hover svg{
   color: var(--lightTextGray);
 }
 
+/* disabling chat icon-person images for small screens */
+
+.chat-frame .icon-person {
+    display: none;
+}
+
 
 /* Chat footer - chat input */
 
@@ -2610,6 +2616,7 @@ footer .f-wrap-big-screen  div:hover svg{
     /* adding img.icon-person to the detail chat */
 
     #main-chat-page  img.icon-person {
+        display: block;
         width: 45px;
         height: 45px;
         object-fit: cover;
@@ -2643,12 +2650,6 @@ footer .f-wrap-big-screen  div:hover svg{
     #main-chat-page .modal-chat-answer .chat-art {
         margin-left: 40px;
     }
-
-
-
-
-
-
 
 }
 
