@@ -41,7 +41,6 @@
   /* film */
   --filmPictureSize: 16vw;
 
-
   /* Icons */
   --footerIconSize: 9vw;
 
@@ -184,7 +183,6 @@ h1 {
   color: var(--lightTextGray);
   text-decoration: none;
 }
-
 
 /*
 ===================================================
@@ -395,8 +393,6 @@ h1 {
     margin-left: 25px;
   }
 }
-
-
 
 /*
 ===================================================
@@ -736,8 +732,6 @@ footer .profile svg {
 
 /* ========================== */
 
-
-
 /* modal positioning */
 
 @media screen and (min-width: 320px) {
@@ -958,7 +952,6 @@ footer .profile svg {
 }
 
 /* =============== Page ================  */
-
 
 /* disables the info-wrap add1 fot the standard mobile view */
 #main-user-page .add1 {
