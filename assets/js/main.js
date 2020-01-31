@@ -119,14 +119,18 @@ $(document).ready(function () {
     });
 
     $('.first-chat-link').click(function (event) {
+        let iw = window.innerWidth;
         // Don't follow the link
         event.preventDefault();
         // Log the clicked element in the console
         console.log("You clicked -link-to-detail-chat- class");
-        var myElementShow = document.getElementById("main-message-page");
-        var myElementHyde = document.getElementById("main-chat-page");
-        myElementHyde.style.display = "block";
-        myElementShow.style.display = "none";
+        /* We check if screen is mobile before executing link */
+        if (iw < 768) {
+            var myElementShow = document.getElementById("main-message-page");
+            var myElementHyde = document.getElementById("main-chat-page");
+            myElementHyde.style.display = "block";
+            myElementShow.style.display = "none";
+        }
     });
 
     $('.fnc-back').click(function (event) {
