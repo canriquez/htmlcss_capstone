@@ -1059,8 +1059,6 @@ footer .profile svg {
   font-weight: 400;
 }
 
-
-
 /*
 ====================== scroll menu =============
 */
@@ -1326,7 +1324,6 @@ footer .profile svg {
 ===================================================
 */
 
-
 /* display=none nav-wrap-big-screens for mobile media */
 
 #main-chat-page .nav-bar .nav-wrap-big-screen {
@@ -1345,7 +1342,6 @@ footer .profile svg {
 #main-message-page .msg-frame {
   width: 100%;
 }
-
 
 /* On standard mobile view, we turn off big screen's nav and footer */
 .nav-bar .nav-wrap-big-view {
@@ -1441,7 +1437,6 @@ footer .profile svg {
   margin: 0;
   margin-bottom: 18px;
 }
-
 
 /* Adjust footet icon sizes */
 
@@ -1569,7 +1564,6 @@ footer .profile a {
   width: 80%;
   fill: white;
 }
-
 
 /* Alternative footer  for big screens */
 
