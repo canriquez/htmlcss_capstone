@@ -13,11 +13,6 @@
   font-style: normal;
 }
 
-/*   @font-face {
-    font-family: Material-Design-Iconic-Font;
-    src: url(../fonts/Material-Design-Iconic-Font.woff2) format('woff2'),url(../fonts/Material-Design-Iconic-Font.woff) format('woff'),url(../fonts/Material-Design-Iconic-Font.ttf?v=2.1.0) format('truetype')
-} */
-
 /*
 ===================================================
                 Variables
@@ -30,10 +25,6 @@
   --orange: #f0916e;
   --gray: #414464;
   --baseBackground: rgb(246, 246, 246);
-
-  /*   --baseBackground: rgb(247, 242, 234); */
-
-  /*     --baseBackground: #D7E0E8; */
   --iconBackGround: rgb(243, 245, 246);
   --lightTextGray: rgb(170, 185, 190);
   --lightTextGray2: rgb(131, 141, 145);
@@ -971,9 +962,6 @@ footer .profile svg {
 .user-page .info1-block {
   padding-left: 25px;
   padding-right: 25px;
-
-  /*   padding-top: calc(var(--vh, 1vh) * 4);
-  padding-bottom: 10px; */
 }
 
 .user-page .info1-block .info-wrap {
@@ -1365,10 +1353,6 @@ footer .profile svg {
   flex-direction: column;
   margin: 10px auto;
   height: auto;
-
-  /*  max-height: 20vh; */
-
-  /*  min-width: 80vw; */
   height: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
@@ -2868,9 +2852,3 @@ footer .f-wrap-big-screen div:hover svg {
 
   /* +++++++++++++++++++++++end- recopu old main.css ____ */
 }
-
-/*
-===================================================
-               tablet - media query >1300 Screens
-===================================================
-*/
