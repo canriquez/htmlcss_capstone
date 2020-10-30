@@ -56,7 +56,7 @@ Solution:
 - To make the messages page scroll inside the container while in media bigger or equal to 1024px, I needed to assign to the main page inside the section, a specific size of 62vh (considering the nab-var height). 
 - Inside the messages container (msg-frame class), I included the property overflow-y to enable the scroll effect.
 - Finally, I work all the height parameters in each modal-message (modal-msg) to  "auto," so, in that way, there is no fixed height, and the msg-frame would have all messages placed in order and with the same size one after the other.
-- with this solution, the complete frame would then overflow from the main-page section (msg-frame) container, achieving the scroll effect. 
+- With this solution, the complete frame would then overflow from the main-page section (msg-frame) container, achieving the scroll effect. 
 - Finally, I positioned the footer and the menu relative to its parent container. So, it gets rendered in continuation to the main page section with a little 2% offset to compensate for the required margin-top and bottom to align the icons.
 
 > Basic Demo Navigability 
